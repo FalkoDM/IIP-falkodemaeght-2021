@@ -7,6 +7,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfDemo1", "WpfDemo1\WpfDem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleDemo1", "ConsoleDemo1\ConsoleDemo1.csproj", "{EEEBBE3A-A6C7-404E-B196-525D4E284082}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleHello", "ConsoleHello\ConsoleHello.csproj", "{7FC47E3C-8928-4894-9B05-89DFCD776DC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleGedicht", "ConsoleGedicht\ConsoleGedicht.csproj", "{DD78F0AC-A5CC-4729-9BFD-B837373295EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAsciiArt", "ConsoleAsciiArt\ConsoleAsciiArt.csproj", "{5623E5C9-97C7-4E36-AB43-0539425FE409}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleGreenHouse", "ConsoleGreenHouse\ConsoleGreenHouse.csproj", "{1A44307D-0D7B-4CAD-A55D-91EB4EAD2CE5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +29,22 @@ Global
 		{EEEBBE3A-A6C7-404E-B196-525D4E284082}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EEEBBE3A-A6C7-404E-B196-525D4E284082}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EEEBBE3A-A6C7-404E-B196-525D4E284082}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FC47E3C-8928-4894-9B05-89DFCD776DC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FC47E3C-8928-4894-9B05-89DFCD776DC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FC47E3C-8928-4894-9B05-89DFCD776DC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FC47E3C-8928-4894-9B05-89DFCD776DC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD78F0AC-A5CC-4729-9BFD-B837373295EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD78F0AC-A5CC-4729-9BFD-B837373295EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD78F0AC-A5CC-4729-9BFD-B837373295EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD78F0AC-A5CC-4729-9BFD-B837373295EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5623E5C9-97C7-4E36-AB43-0539425FE409}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5623E5C9-97C7-4E36-AB43-0539425FE409}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5623E5C9-97C7-4E36-AB43-0539425FE409}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5623E5C9-97C7-4E36-AB43-0539425FE409}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A44307D-0D7B-4CAD-A55D-91EB4EAD2CE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A44307D-0D7B-4CAD-A55D-91EB4EAD2CE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A44307D-0D7B-4CAD-A55D-91EB4EAD2CE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A44307D-0D7B-4CAD-A55D-91EB4EAD2CE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
