@@ -1,0 +1,7 @@
+C:\Users\falko\Desktop\school\IIP\FalkoDM\IIP-falkodemaeght-2021\ConsoleHelloWorld\ConsoleHelloWorld\bin\Debug\ConsoleHelloWorld.exe.config
+C:\Users\falko\Desktop\school\IIP\FalkoDM\IIP-falkodemaeght-2021\ConsoleHelloWorld\ConsoleHelloWorld\bin\Debug\ConsoleHelloWorld.exe
+C:\Users\falko\Desktop\school\IIP\FalkoDM\IIP-falkodemaeght-2021\ConsoleHelloWorld\ConsoleHelloWorld\bin\Debug\ConsoleHelloWorld.pdb
+C:\Users\falko\Desktop\school\IIP\FalkoDM\IIP-falkodemaeght-2021\ConsoleHelloWorld\ConsoleHelloWorld\obj\Debug\ConsoleHelloWorld.csprojAssemblyReference.cache
+C:\Users\falko\Desktop\school\IIP\FalkoDM\IIP-falkodemaeght-2021\ConsoleHelloWorld\ConsoleHelloWorld\obj\Debug\ConsoleHelloWorld.csproj.CoreCompileInputs.cache
+C:\Users\falko\Desktop\school\IIP\FalkoDM\IIP-falkodemaeght-2021\ConsoleHelloWorld\ConsoleHelloWorld\obj\Debug\ConsoleHelloWorld.exe
+C:\Users\falko\Desktop\school\IIP\FalkoDM\IIP-falkodemaeght-2021\ConsoleHelloWorld\ConsoleHelloWorld\obj\Debug\ConsoleHelloWorld.pdb

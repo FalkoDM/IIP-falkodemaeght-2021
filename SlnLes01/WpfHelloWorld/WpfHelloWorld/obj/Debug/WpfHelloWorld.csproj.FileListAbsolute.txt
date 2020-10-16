@@ -1,0 +1,15 @@
+C:\Users\falko\Desktop\school\IIP\FalkoDM\IIP-falkodemaeght-2021\SlnLes01\WpfHelloWorld\WpfHelloWorld\bin\Debug\WpfHelloWorld.exe.config
+C:\Users\falko\Desktop\school\IIP\FalkoDM\IIP-falkodemaeght-2021\SlnLes01\WpfHelloWorld\WpfHelloWorld\bin\Debug\WpfHelloWorld.exe
+C:\Users\falko\Desktop\school\IIP\FalkoDM\IIP-falkodemaeght-2021\SlnLes01\WpfHelloWorld\WpfHelloWorld\bin\Debug\WpfHelloWorld.pdb
+C:\Users\falko\Desktop\school\IIP\FalkoDM\IIP-falkodemaeght-2021\SlnLes01\WpfHelloWorld\WpfHelloWorld\obj\Debug\WpfHelloWorld.csprojAssemblyReference.cache
+C:\Users\falko\Desktop\school\IIP\FalkoDM\IIP-falkodemaeght-2021\SlnLes01\WpfHelloWorld\WpfHelloWorld\obj\Debug\MainWindow.g.cs
+C:\Users\falko\Desktop\school\IIP\FalkoDM\IIP-falkodemaeght-2021\SlnLes01\WpfHelloWorld\WpfHelloWorld\obj\Debug\App.g.cs
+C:\Users\falko\Desktop\school\IIP\FalkoDM\IIP-falkodemaeght-2021\SlnLes01\WpfHelloWorld\WpfHelloWorld\obj\Debug\WpfHelloWorld_MarkupCompile.cache
+C:\Users\falko\Desktop\school\IIP\FalkoDM\IIP-falkodemaeght-2021\SlnLes01\WpfHelloWorld\WpfHelloWorld\obj\Debug\WpfHelloWorld_MarkupCompile.lref
+C:\Users\falko\Desktop\school\IIP\FalkoDM\IIP-falkodemaeght-2021\SlnLes01\WpfHelloWorld\WpfHelloWorld\obj\Debug\MainWindow.baml
+C:\Users\falko\Desktop\school\IIP\FalkoDM\IIP-falkodemaeght-2021\SlnLes01\WpfHelloWorld\WpfHelloWorld\obj\Debug\WpfHelloWorld.g.resources
+C:\Users\falko\Desktop\school\IIP\FalkoDM\IIP-falkodemaeght-2021\SlnLes01\WpfHelloWorld\WpfHelloWorld\obj\Debug\WpfHelloWorld.Properties.Resources.resources
+C:\Users\falko\Desktop\school\IIP\FalkoDM\IIP-falkodemaeght-2021\SlnLes01\WpfHelloWorld\WpfHelloWorld\obj\Debug\WpfHelloWorld.csproj.GenerateResource.cache
+C:\Users\falko\Desktop\school\IIP\FalkoDM\IIP-falkodemaeght-2021\SlnLes01\WpfHelloWorld\WpfHelloWorld\obj\Debug\WpfHelloWorld.csproj.CoreCompileInputs.cache
+C:\Users\falko\Desktop\school\IIP\FalkoDM\IIP-falkodemaeght-2021\SlnLes01\WpfHelloWorld\WpfHelloWorld\obj\Debug\WpfHelloWorld.exe
+C:\Users\falko\Desktop\school\IIP\FalkoDM\IIP-falkodemaeght-2021\SlnLes01\WpfHelloWorld\WpfHelloWorld\obj\Debug\WpfHelloWorld.pdb
