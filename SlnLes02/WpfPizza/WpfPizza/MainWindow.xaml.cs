@@ -33,21 +33,21 @@ namespace WpfPizza
 
         private void rbn1_1_Checked(object sender, RoutedEventArgs e)
         {
-            // beschrijving + foto als eerste box aangevinkt wordt
+            // description + image when first box is checked
             txtDescription.Text = "Tomatensaus, mozzarella, rode ui, Pepperoni en rundsvlees";
             ImgPizza.Source = new BitmapImage(new Uri("Images/Hotspicy.jpg", UriKind.Relative));
         }
 
         private void rbn1_2_Checked(object sender, RoutedEventArgs e)
         {
-            // beschrijving + foto als tweede box aangevinkt wordt
+            // description + image when second box is checked
             txtDescription.Text = "Tomatensaus, mozzarella, champignons, artisjok, olijven en ham";
             ImgPizza.Source = new BitmapImage(new Uri("Images/pizza_4_saisons.png", UriKind.Relative));
         }
 
         private void rbn1_3_Checked(object sender, RoutedEventArgs e)
         {
-            // beschrijving + foto als derde box aangevinkt wordt
+            // description + image when third box is checked
             txtDescription.Text = "Tomatensaus; mozzarella, ham en ananas";
             ImgPizza.Source = new BitmapImage(new Uri("Images/Hawaipng.png", UriKind.Relative));
         }

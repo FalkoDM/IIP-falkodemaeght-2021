@@ -27,12 +27,15 @@ namespace WpfHelloWorld
 
         private void btnOk_Click(object sender, RoutedEventArgs e)
         {
+
+            // change content of label
             lblName.Content = "Hallo " + txtName.Text;
             txtName.Text = "";
         }
 
         private void btnHerstel_Click(object sender, RoutedEventArgs e)
         {
+            // reset the content off label to it's original value
             lblName.Content = "Hallo, hoe is je naam?";
         }
     }

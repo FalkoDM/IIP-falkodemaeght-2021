@@ -32,13 +32,18 @@ namespace WpfChat
             // txt chat is chatbox (textblock)
             // txt Name is name input (textbox)
             // txt Msg is bericht input (textbox)
-            txtMsg.Text = txtMsg.Text.Replace("kut", "***");
-            txtMsg.Text = txtMsg.Text.Replace("shit", "****");
-            txtMsg.Text = txtMsg.Text.Replace("fuck", "****");
-            txtMsg.Text = txtMsg.Text.Replace("bitch", "****");
-            txtMsg.Text = txtMsg.Text.Replace("dju", "***");
-            Console.WriteLine(txtMsg.Text);
-            txtChat.Text += txtName.Text + " says:" + Environment.NewLine + txtMsg.Text + Environment.NewLine + Environment.NewLine;
+
+            // replace dirty words and add variable for textmsg
+            var chatmessage = txtMsg.Text.Replace("kut", "***") 
+                .Replace("shit", "****")
+                .Replace("fuck", "****")
+                .Replace("bitch", "****")
+                .Replace("dju", "***");
+
+            // link txtname and txtmsg (chatmessage) to textchat (chatbox)
+            txtChat.Text += txtName.Text + " says:" + Environment.NewLine + chatmessage + Environment.NewLine + Environment.NewLine;
+            
+            // return empty string for input
             txtName.Text = string.Empty;
             txtMsg.Text = string.Empty;
         }
