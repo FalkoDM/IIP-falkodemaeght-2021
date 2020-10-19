@@ -1,10 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\SlnLes02",
-    "\\SlnLes02\\WpfDemo1",
-    "\\SlnLes02\\WpfHelloWorld"
+    "\\SlnLes01\\WpfHelloWorld",
+    "\\SlnLes01\\WpfHelloWorld\\WpfHelloWorld",
+    "\\SlnLes02"
   ],
-  "SelectedNode": "\\SlnLes02\\WpfHelloWorld\\MainWindow.xaml.cs",
+  "SelectedNode": "\\SlnLes02\\SlnLes02.sln",
   "PreviewInSolutionExplorer": false
 }
