@@ -6,11 +6,13 @@
         xmlns:local="clr-namespace:WpfPizza"
         mc:Ignorable="d"
         Title="MainWindow" Height="575" Width="1200">
-    <Grid>
-        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="112,92,0,0" VerticalAlignment="Top" Height="46" Width="147" FontSize="16"/>
-        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="112,143,0,0" VerticalAlignment="Top" Height="46" Width="147" FontSize="16"/>
-        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="112,194,0,0" VerticalAlignment="Top" Height="46" Width="147" FontSize="16"/>
-        <Image HorizontalAlignment="Left" Height="253" Margin="635,92,0,0" VerticalAlignment="Top" Width="280"/>
+    <Grid Background="#FFF4DC9D">
+        <RadioButton x:Name="rbn1_1" Content="Hot &amp; Spicy" HorizontalAlignment="Left" Margin="112,197,0,0" VerticalAlignment="Top" Height="46" Width="147" FontSize="16" VerticalContentAlignment="Center" Checked="rbn1_1_Checked"/>
+        <RadioButton x:Name="rbn1_2" Content="4 Seizoenen" HorizontalAlignment="Left" Margin="112,248,0,0" VerticalAlignment="Top" Height="46" Width="147" FontSize="16" VerticalContentAlignment="Center" Checked="rbn1_2_Checked"/>
+        <RadioButton x:Name="rbn1_3" Content="Hawaï" HorizontalAlignment="Left" Margin="112,299,0,0" VerticalAlignment="Top" Height="46" Width="147" FontSize="16" VerticalContentAlignment="Center" Checked="rbn1_3_Checked"/>
+        <Image x:Name="ImgPizza" HorizontalAlignment="Left" Height="193" Margin="743,152,0,0" VerticalAlignment="Top" Width="248"/>
+        <Label Content="BESTEL JE PIZZA" HorizontalAlignment="Left" Margin="112,92,0,0" VerticalAlignment="Top" Height="49" Width="225" FontSize="24" FontWeight="Bold"/>
+        <TextBlock x:Name="txtDescription" HorizontalAlignment="Left" Margin="322,197,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="97" Width="352"/>
 
     </Grid>
 </Window>
