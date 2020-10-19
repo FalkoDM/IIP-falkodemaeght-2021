@@ -18,19 +18,19 @@ namespace ConsoleGreenHouse
             // ask input to user
             Console.Write("Kies een grootte (kleine of grote)");
 
-            // store input
+            // store input to variable
             string grootte = Console.ReadLine();
 
             // ask input to user
             Console.Write("Kies een basis (quinoa, rijst of salade)");
 
-            // store input
+            // store input to variable
             string basis = Console.ReadLine();
 
             // ask input to user
             Console.Write("Kies een soort (Vegan, Zalm of Kip)");
 
-            // store input
+            // store input to variable
             string soort = Console.ReadLine();
 
             // write out the result of the input

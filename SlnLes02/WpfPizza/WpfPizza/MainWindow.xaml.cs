@@ -26,11 +26,6 @@ namespace WpfPizza
             InitializeComponent();
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
         private void rbn1_1_Checked(object sender, RoutedEventArgs e)
         {
             // description + image when first box is checked

@@ -3,9 +3,14 @@
     "",
     "\\Project\\Project Falko De Maeght",
     "\\Project\\Project Falko De Maeght\\ConsoleMusicPlayer",
-    "\\SlnLes01",
+    "\\SlnLes01\\ConsoleHelloWorld\\ConsoleHelloWorld",
     "\\SlnLes02",
-    "\\SlnLes02\\WpfPizza\\WpfPizza"
+    "\\SlnLes02\\WpfChat\\WpfChat",
+    "\\SlnLes02\\WpfPizza",
+    "\\SlnLes02\\WpfPizza\\WpfPizza",
+    "\\SlnLes02\\WpfSlider",
+    "\\SlnLes02\\WpfSlider\\WpfSlider"
   ],
+  "SelectedNode": "\\SlnLes02\\SlnLes02.sln",
   "PreviewInSolutionExplorer": false
 }
