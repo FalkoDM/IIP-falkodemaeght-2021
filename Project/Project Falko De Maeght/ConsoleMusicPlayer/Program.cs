@@ -11,8 +11,20 @@ namespace ConsoleMusicPlayer
     {
         static void Main(string[] args)
         {
-            WindowsMediaPlayer player = new WindowsMediaPlayer();
+           // Layout 
+            Console.WriteLine("MEDIAPLAYER");
+            Console.WriteLine("===========");
+            Console.Write("Bestand afspelen: ");
 
+            // ask for song path
+            var song = Console.ReadLine();
+
+            // initialize player
+            WindowsMediaPlayer player = new WindowsMediaPlayer();
+            player.URL = song;
+
+            // press key to exit player
+            Console.ReadKey();
         }
     }
 }
