@@ -46,7 +46,7 @@ namespace WpfInterest
             double waarde = startbedrag * Math.Pow(interest, termijn);
 
             // result rounded to 2 digits after comma
-            lblResultaat.Content = Math.Round(waarde,2);
+            lblResultaat.Content = $"De waarde na {lblJaren.Content} jaar bedraagt {Math.Round(waarde, 2)}";
         }
     }
 }

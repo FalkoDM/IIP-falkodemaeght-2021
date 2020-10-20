@@ -18,7 +18,7 @@
         <Label Content="Periode:" HorizontalAlignment="Left" Margin="40,184,0,0" VerticalAlignment="Top" Height="27" Width="66" FontSize="14"/>
         <Label x:Name="lblJaren" Content="" HorizontalAlignment="Left" Margin="297,185,0,0" VerticalAlignment="Top" FontSize="14" Width="40" Height="27"/>
         <Button x:Name="btnBereken" Content="BEREKENEN" HorizontalAlignment="Left" Margin="82,241,0,0" VerticalAlignment="Top" Width="210" Height="44" Click="Button_Click" FontSize="20" FontWeight="Bold"/>
-        <Label x:Name="lblResultaat" Content="Label" HorizontalAlignment="Left" Margin="40,323,0,0" VerticalAlignment="Top" Height="39" Width="252" FontSize="14"/>
+        <Label x:Name="lblResultaat" Content="" HorizontalAlignment="Left" Margin="40,323,0,0" VerticalAlignment="Top" Height="39" Width="252" FontSize="14"/>
         <Label Content="Jaar" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="337,184,0,0" FontSize="14"/>
 
     </Grid>

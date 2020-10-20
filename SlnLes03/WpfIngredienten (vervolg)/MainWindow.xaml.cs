@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfIngredienten
+namespace WpfIngredienten__vervolg_
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -28,29 +28,27 @@ namespace WpfIngredienten
         private void btnLijst_Click(object sender, RoutedEventArgs e)
         {
             // convert personen and hoeveelheden to integers for multiplying
-            // and add them as a variable
-            int personen = Convert.ToInt32(txbPersonen.Text);
+            // and add them as a variable. Also add variables to txbIng and cbxEnh for styling.
             int hoeveelheidEen = Convert.ToInt32(txbHvl1.Text);
             int hoeveelheidTwee = Convert.ToInt32(txbHvl2.Text);
             int hoeveelheidDrie = Convert.ToInt32(txbHvl3.Text);
             int hoeveelheidVier = Convert.ToInt32(txbHvl4.Text);
-
-            // add more variables for eenheid and ingredient and styling purposes
-            var eenheidEen = txbEnh1.Text;
-            var eenheidTwee = txbEnh2.Text;
-            var eenheidDrie = txbEnh3.Text;
-            var eenheidVier = txbEnh4.Text;
-            var IngredientEen = txbIng1.Text;
-            var IngredientTwee = txbIng2.Text;
-            var IngredientDrie = txbIng3.Text;
-            var IngredientVier = txbIng4.Text;
+            var personen = Convert.ToInt32(cbxPersonen.Text);
+            var ingredientEen = txbIng1.Text;
+            var ingredientTwee = txbIng2.Text;
+            var ingredientDrie = txbIng3.Text;
+            var ingredientVier = txbIng4.Text;
+            var eenheidEen = cbxEnh1.Text;
+            var eenheidTwee = cbxEnh2.Text;
+            var eenheidDrie = cbxEnh3.Text;
+            var eenheidVier = cbxEnh4.Text;
 
             // display the content using $ string interpolatie 
-            lblBoodschappen.Content = 
-                $"{personen * hoeveelheidEen} {eenheidEen} {IngredientEen} {Environment.NewLine}" +
-                $"{personen * hoeveelheidTwee} {eenheidTwee} {IngredientTwee} {Environment.NewLine}" +
-                $"{personen * hoeveelheidDrie} {eenheidDrie} {IngredientDrie} {Environment.NewLine}" +
-                $"{personen * hoeveelheidVier} {eenheidVier} {IngredientVier} {Environment.NewLine}";
+            lblBoodschappen.Content =
+                $"{personen * hoeveelheidEen} {eenheidEen} {ingredientEen} {Environment.NewLine}" +
+                $"{personen * hoeveelheidTwee} {eenheidTwee} {ingredientTwee} {Environment.NewLine}" +
+                $"{personen * hoeveelheidDrie} {eenheidDrie} {ingredientDrie} {Environment.NewLine}" +
+                $"{personen * hoeveelheidVier} {eenheidVier} {ingredientVier} {Environment.NewLine}";
         }
     }
 }

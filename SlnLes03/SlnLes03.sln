@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfInterest", "WpfInterest\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfIngredienten", "WpfIngredienten\WpfIngredienten.csproj", "{3276C4B6-28B7-4343-B93B-1E5C51C1CA5B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfIngredienten (vervolg)", "WpfIngredienten (vervolg)\WpfIngredienten (vervolg).csproj", "{E452426B-2B18-499D-8805-5AA780580C0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAlcohol", "WpfAlcohol\WpfAlcohol.csproj", "{6A26E20A-499F-4A61-A77B-296026837025}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{3276C4B6-28B7-4343-B93B-1E5C51C1CA5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3276C4B6-28B7-4343-B93B-1E5C51C1CA5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3276C4B6-28B7-4343-B93B-1E5C51C1CA5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E452426B-2B18-499D-8805-5AA780580C0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E452426B-2B18-499D-8805-5AA780580C0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E452426B-2B18-499D-8805-5AA780580C0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E452426B-2B18-499D-8805-5AA780580C0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A26E20A-499F-4A61-A77B-296026837025}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A26E20A-499F-4A61-A77B-296026837025}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A26E20A-499F-4A61-A77B-296026837025}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A26E20A-499F-4A61-A77B-296026837025}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

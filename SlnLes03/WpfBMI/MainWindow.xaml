@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfBMI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="BMI" Height="450" Width="800">
     <Grid>
         <Label Content="BMI Calculator" HorizontalAlignment="Left " Margin="185,88,0,0" VerticalAlignment="Top" Height="43" Width="172" FontSize="18" FontWeight="Bold"/>
         <Label Content="Lengte:" HorizontalAlignment="Left" Margin="84,151,0,0" VerticalAlignment="Top" Height="36" Width="82" FontSize="14" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
