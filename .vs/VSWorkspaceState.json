@@ -1,15 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Project\\Project Falko De Maeght",
-    "\\Project\\Project Falko De Maeght\\ConsoleMusicPlayer",
-    "\\SlnLes01\\ConsoleHelloWorld\\ConsoleHelloWorld",
+    "\\SlnLes01",
     "\\SlnLes02",
+    "\\SlnLes02\\WpfChat",
     "\\SlnLes02\\WpfChat\\WpfChat",
+    "\\SlnLes02\\WpfHelloWorld",
     "\\SlnLes02\\WpfPizza",
     "\\SlnLes02\\WpfPizza\\WpfPizza",
     "\\SlnLes02\\WpfSlider",
-    "\\SlnLes02\\WpfSlider\\WpfSlider"
+    "\\SlnLes02\\WpfSlider\\WpfSlider",
+    "\\SlnLes03\\WpfBMI"
   ],
   "SelectedNode": "\\SlnLes02\\SlnLes02.sln",
   "PreviewInSolutionExplorer": false
