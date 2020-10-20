@@ -1,0 +1,34 @@
+﻿<Window x:Class="WpfIngredienten.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfIngredienten"
+        mc:Ignorable="d"
+        Title="Boodschappenlijst" Height="450" Width="800">
+    <Grid>
+        <Label Content="Ingrediënten" HorizontalAlignment="Left" Margin="67,41,0,0" VerticalAlignment="Top" Height="40" Width="152" FontSize="20" FontWeight="Bold"/>
+        <Label Content="Aantal personen:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="67,81,0,0" Width="113" FontSize="14"/>
+        <Label Content="Ingrediënten (per persoon):" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="67,124,0,0" Height="34" Width="190" FontSize="14" FontWeight="Bold"/>
+        <Label Content="Hoeveelheid" HorizontalAlignment="Left" Margin="67,158,0,0" VerticalAlignment="Top" Height="30" Width="91" FontSize="14" FontWeight="Bold"/>
+        <Label Content="Eenheid" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="181,160,0,0" FontSize="14" FontWeight="Bold"/>
+        <Label Content="Boodschappenlijst" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="542,158,0,0" Height="27" Width="152" FontSize="14" FontWeight="Bold"/>
+        <Label Content="Ingrediënt" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="257,158,0,0" FontSize="14" FontWeight="Bold"/>
+        <TextBox x:Name="txbPersonen" HorizontalAlignment="Left" Height="23" Margin="185,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" FontSize="14"/>
+        <TextBox x:Name="txbHvl1" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" Margin="84,193,0,0" FontSize="14"/>
+        <TextBox x:Name="txbEnh1" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" FontSize="14" Margin="181,193,0,0"/>
+        <TextBox x:Name="txbIng1" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="14" Margin="257,193,0,0"/>
+        <TextBox x:Name="txbHvl2" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" FontSize="14" Margin="84,221,0,0"/>
+        <TextBox x:Name="txbEnh2" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" FontSize="14" Margin="181,221,0,0"/>
+        <TextBox x:Name="txbIng2" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="14" Margin="257,221,0,0"/>
+        <TextBox x:Name="txbHvl3" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" FontSize="14" Margin="84,249,0,0"/>
+        <TextBox x:Name="txbEnh3" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" FontSize="14" Margin="181,249,0,0"/>
+        <TextBox x:Name="txbIng3" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="14" Margin="257,249,0,0"/>
+        <TextBox x:Name="txbHvl4" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" FontSize="14" Margin="84,277,0,0"/>
+        <TextBox x:Name="txbEnh4" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" FontSize="14" Margin="181,277,0,0"/>
+        <TextBox x:Name="txbIng4" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="14" Margin="257,277,0,0"/>
+        <Button x:Name="btnLijst" Content="MAAK BOOSSCHAPPENLIJST" HorizontalAlignment="Left" Margin="181,326,0,0" VerticalAlignment="Top" Width="248" Height="42" FontSize="16" FontWeight="Bold" Click="btnLijst_Click"/>
+        <Label x:Name="lblBoodschappen" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="542,190,0,0" Height="110" Width="152" FontSize="14"/>
+
+    </Grid>
+</Window>

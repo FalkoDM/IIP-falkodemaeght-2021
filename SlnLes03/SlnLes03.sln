@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfBMI", "WpfBMI\WpfBMI.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfInterest", "WpfInterest\WpfInterest.csproj", "{E4616477-5A7B-4837-9195-BD01987FA71A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfIngredienten", "WpfIngredienten\WpfIngredienten.csproj", "{3276C4B6-28B7-4343-B93B-1E5C51C1CA5B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{E4616477-5A7B-4837-9195-BD01987FA71A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4616477-5A7B-4837-9195-BD01987FA71A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4616477-5A7B-4837-9195-BD01987FA71A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3276C4B6-28B7-4343-B93B-1E5C51C1CA5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3276C4B6-28B7-4343-B93B-1E5C51C1CA5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3276C4B6-28B7-4343-B93B-1E5C51C1CA5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3276C4B6-28B7-4343-B93B-1E5C51C1CA5B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
