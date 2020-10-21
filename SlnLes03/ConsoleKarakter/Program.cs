@@ -11,15 +11,26 @@ namespace ConsoleKarakter
     {
         static void Main(string[] args)
         {
-            // werkt nog niet, vind voorlopig nog niet hoe ik dit moet converteren
+            // input van de gebruiker.
             Console.Write("Geef een kleine letter: ");
-            string c = Console.ReadLine();
-            Console.WriteLine(System.Convert.ToInt32(c));
-            
-            //foreach (char c in a)
-            //{
-            //    Console.WriteLine(System.Convert.ToInt32(c));
-            //}
+
+            // omzetten van de kleine letter naar de ASCII waarde
+            int nummer = Convert.ToChar(Console.ReadLine());
+
+            // hoofdletter berekenen door 32 af te trekken van de ASCII waarde
+            char hoofdletter = Convert.ToChar(nummer - 32);
+
+            // we tellen er eentje bij op om de volgende letter te bekomen
+            char letterNext = Convert.ToChar(nummer + 1);
+
+            // we trekken er een van af om de vorige letter te bekomen.
+            char letterPrev = Convert.ToChar(nummer - 1);
+
+            // output
+            Console.WriteLine($"Het nummer is {nummer}");
+            Console.WriteLine($"De hoofdletter is {hoofdletter}");
+            Console.WriteLine($"de vorige letter is {letterPrev}");
+            Console.WriteLine($"de volgende letter is {letterNext}");
             Console.ReadKey();
 
         }

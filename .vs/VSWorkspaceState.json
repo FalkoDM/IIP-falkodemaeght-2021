@@ -1,17 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\SlnLes01",
-    "\\SlnLes02",
-    "\\SlnLes02\\WpfChat",
-    "\\SlnLes02\\WpfChat\\WpfChat",
-    "\\SlnLes02\\WpfHelloWorld",
-    "\\SlnLes02\\WpfPizza",
-    "\\SlnLes02\\WpfPizza\\WpfPizza",
-    "\\SlnLes02\\WpfSlider",
-    "\\SlnLes02\\WpfSlider\\WpfSlider",
-    "\\SlnLes03\\WpfBMI"
+    "\\SlnLes03",
+    "\\SlnLes03\\WpfCalculator"
   ],
-  "SelectedNode": "\\SlnLes02\\SlnLes02.sln",
+  "SelectedNode": "\\SlnLes03\\SlnLes03.sln",
   "PreviewInSolutionExplorer": false
 }
