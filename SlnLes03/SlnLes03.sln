@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAlcohol", "WpfAlcohol\Wp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfCalculator", "WpfCalculator\WpfCalculator.csproj", "{52D0817E-E0CA-4AF1-90FC-1568D2DEA118}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleBMI", "ConsoleBMI\ConsoleBMI.csproj", "{F9D728F3-FFBD-4264-A79B-D7D5FC5BA2CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{52D0817E-E0CA-4AF1-90FC-1568D2DEA118}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52D0817E-E0CA-4AF1-90FC-1568D2DEA118}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52D0817E-E0CA-4AF1-90FC-1568D2DEA118}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9D728F3-FFBD-4264-A79B-D7D5FC5BA2CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9D728F3-FFBD-4264-A79B-D7D5FC5BA2CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9D728F3-FFBD-4264-A79B-D7D5FC5BA2CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9D728F3-FFBD-4264-A79B-D7D5FC5BA2CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
