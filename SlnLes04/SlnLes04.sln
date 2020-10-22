@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfSliderKleur", "WpfSlider
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfBieden", "WpfBieden\WpfBieden.csproj", "{1ED61E4E-5A0E-43F3-8A8F-1123C9A0D6E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfFormChecking", "WpfFormChecking\WpfFormChecking.csproj", "{AAF78067-F461-4A24-A771-451AD94B009C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{1ED61E4E-5A0E-43F3-8A8F-1123C9A0D6E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1ED61E4E-5A0E-43F3-8A8F-1123C9A0D6E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1ED61E4E-5A0E-43F3-8A8F-1123C9A0D6E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAF78067-F461-4A24-A771-451AD94B009C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAF78067-F461-4A24-A771-451AD94B009C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAF78067-F461-4A24-A771-451AD94B009C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAF78067-F461-4A24-A771-451AD94B009C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
