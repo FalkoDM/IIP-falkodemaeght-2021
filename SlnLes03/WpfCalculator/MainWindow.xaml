@@ -27,8 +27,8 @@
         <Button x:Name="btnRnd" Content="RND" HorizontalAlignment="Left" Margin="487,331,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnRnd_Click"/>
         <Button x:Name="btnCe" Content="CE" HorizontalAlignment="Left" Margin="327,331,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnCe_Click"/>
         <Button x:Name="btnKomma" Content="." HorizontalAlignment="Left" Margin="167,331,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnKomma_Click"/>
-        <TextBlock x:Name="txtResult" HorizontalAlignment="Left" Margin="167,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="370" FlowDirection="RightToLeft" FontSize="14" Text="0.0"/>
-        <TextBlock x:Name="txtStore" HorizontalAlignment="Left" Margin="168,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="369" FontSize="14" FlowDirection="RightToLeft" Background="#FFEDEEEE"/>
+        <Label x:Name="lblResult" Content="0" HorizontalAlignment="Left" Margin="327,69,0,0" VerticalAlignment="Top" Height="38" Width="210" FontSize="14" HorizontalContentAlignment="Right"/>
+        <TextBox x:Name="txtStore" IsReadOnly="True" HorizontalAlignment="Left" Height="54" Margin="247,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="290"/>
 
     </Grid>
 </Window>

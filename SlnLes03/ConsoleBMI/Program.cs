@@ -30,7 +30,7 @@ namespace ConsoleBMI
             double gewicht = Convert.ToDouble(getal);
 
             // bmi berekenen, afronden en weergeven
-            double BMI = gewicht / Math.Pow(lengteInM, lengteInM);
+            double BMI = gewicht / Math.Pow(lengteInM, 2);
             Console.WriteLine($"je BMI bedraagt:, {Math.Round(BMI, 2)}");
             Console.ReadKey();
 

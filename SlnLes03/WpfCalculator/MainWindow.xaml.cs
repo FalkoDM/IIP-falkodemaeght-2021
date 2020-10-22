@@ -26,9 +26,7 @@ namespace WpfCalculator
             InitializeComponent();
         }
 
-        // sterk vereenvoudigde versie van het rekenmachine, het heeft zowel een waarde nodig in de txtStore als de txtResult om te werken
-        // daarnaast kan ik de btnPlus geen twee dingen laten doen. en optellen en een nummer toevoegen op die manier lukt niet.
-        // kan dit oplossen door een ADD NUMBER btn aan toe te voegen.
+        // Als de button van het cijfer wordt ingeklikt door de gebruiker verschijnt het in de textbox
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
             txtStore.Text += "1"; 
@@ -79,82 +77,87 @@ namespace WpfCalculator
             txtStore.Text += "0";
         }
 
+        // onderstaande knop maakt zowel de textbox als de label opnieuw leeg
         private void btnCe_Click(object sender, RoutedEventArgs e)
         {
             txtStore.Text = string.Empty;
-            txtResult.Text = string.Empty;
+            lblResult.Content = 0;
         }
 
+        // onderstaande knop genereert een random getal tussen 0 en 9 en plaatst het in de label
         private void btnRnd_Click(object sender, RoutedEventArgs e)
         {
             Random rnd = new Random();
             int number = rnd.Next(0, 9);
-            txtStore.Text = Convert.ToString(number);          
+            lblResult.Content = Convert.ToString(number);          
         }
 
+        // onderstaande knoppen geven alle bewerkingen weer die je met het rekenmachine kan uitvoeren
+        // let wel dat er eerst een getal moeten ingegeven worden in de textbox anders werkt de machine niet
         private void btnPlus_Click(object sender, RoutedEventArgs e)
         {
-            txtResult.Text = txtStore.Text;
+            double nummer1 = Convert.ToDouble(lblResult.Content);
+            double nummer2 = Convert.ToDouble(txtStore.Text);
+            double resultaat = nummer1 + nummer2;
+            lblResult.Content = Convert.ToString(resultaat);
             txtStore.Text = string.Empty;
         }
 
         private void btnMin_Click(object sender, RoutedEventArgs e)
         {
-            double nummer1 = Convert.ToDouble(txtStore.Text);
-            double nummer2 = Convert.ToDouble(txtResult.Text);
-            double resultaat = nummer2 - nummer1;
-            txtResult.Text = Convert.ToString(resultaat);
+            double nummer1 = Convert.ToDouble(lblResult.Content);
+            double nummer2 = Convert.ToDouble(txtStore.Text);
+            double resultaat = nummer1 - nummer2;
+            lblResult.Content = Convert.ToString(resultaat);
             txtStore.Text = string.Empty;
         }
 
         private void btnMaal_Click(object sender, RoutedEventArgs e)
         {
-            double nummer1 = Convert.ToDouble(txtStore.Text);
-            double nummer2 = Convert.ToDouble(txtResult.Text);
-            double resultaat = nummer2 * nummer1;
-            txtResult.Text = Convert.ToString(resultaat);
+            double nummer1 = Convert.ToDouble(lblResult.Content);
+            double nummer2 = Convert.ToDouble(txtStore.Text);
+            double resultaat = nummer1 * nummer2;
+            lblResult.Content = Convert.ToString(resultaat);
             txtStore.Text = string.Empty;
         }
 
         private void btnDeel_Click(object sender, RoutedEventArgs e)
         {
-            double nummer1 = Convert.ToDouble(txtStore.Text);
-            double nummer2 = Convert.ToDouble(txtResult.Text);
-            double resultaat = nummer2 / nummer1;
-            txtResult.Text = Convert.ToString(resultaat);
+            double nummer1 = Convert.ToDouble(lblResult.Content);
+            double nummer2 = Convert.ToDouble(txtStore.Text);
+            double resultaat = nummer1 / nummer2;
+            lblResult.Content = Convert.ToString(resultaat);
             txtStore.Text = string.Empty;
-        }
-
-        private void btnKomma_Click(object sender, RoutedEventArgs e)
-        {
-            txtStore.Text += ".";
         }
 
         private void btnSqr_Click(object sender, RoutedEventArgs e)
         {
-            double nummer1 = Convert.ToDouble(txtStore.Text);
-            double nummer2 = Convert.ToDouble(txtResult.Text);
-            double resultaat = Math.Pow(nummer2, nummer1);
-            txtResult.Text = Convert.ToString(resultaat);
+            double nummer1 = Convert.ToDouble(lblResult.Content);
+            double resultaat = Math.Pow(nummer1,2);
+            lblResult.Content = Convert.ToString(resultaat);
             txtStore.Text = string.Empty;
         }
 
         private void btnSqrt_Click(object sender, RoutedEventArgs e)
         {
-            double nummer1 = Convert.ToDouble(txtStore.Text);
-            double nummer2 = Convert.ToDouble(txtResult.Text);
-            double resultaat = Math.Sqrt(nummer1);
-            txtResult.Text = Convert.ToString(resultaat);
+            double nummer1 = Convert.ToDouble(lblResult.Content);
+            double resultaat = Math.Sqrt(nummer1); 
+            lblResult.Content = Convert.ToString(resultaat);
             txtStore.Text = string.Empty;
         }
 
         private void btnSin_Click(object sender, RoutedEventArgs e)
         {
-            double nummer1 = Convert.ToDouble(txtStore.Text);
-            double nummer2 = Convert.ToDouble(txtResult.Text);
+            double nummer1 = Convert.ToDouble(lblResult.Content);
             double resultaat = Math.Sin(nummer1);
-            txtResult.Text = Convert.ToString(resultaat);
+            lblResult.Content = Convert.ToString(resultaat);
             txtStore.Text = string.Empty;
+        }
+
+        // deze knop voegt een komma toe tussen twee input getallen
+        private void btnKomma_Click(object sender, RoutedEventArgs e)
+        {
+            txtStore.Text += ",";
         }
     }
 }

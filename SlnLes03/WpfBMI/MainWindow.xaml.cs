@@ -35,7 +35,7 @@ namespace WpfBMI
             double lengthInM = length / 100;
 
             // mathematical operation to calculate bmi
-            double bmi = weight / Math.Pow(lengthInM, lengthInM);
+            double bmi = weight / Math.Pow(lengthInM, 2);
 
             // round the numbers to two behind the comma and display in label
             lblBmi.Content = Math.Round(bmi,2);
