@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfRaden", "WpfRaden\WpfRad
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfSliderKleur", "WpfSliderKleur\WpfSliderKleur.csproj", "{E37E051F-2AAD-4607-A9F7-1B705E8EC304}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfBieden", "WpfBieden\WpfBieden.csproj", "{1ED61E4E-5A0E-43F3-8A8F-1123C9A0D6E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{E37E051F-2AAD-4607-A9F7-1B705E8EC304}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E37E051F-2AAD-4607-A9F7-1B705E8EC304}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E37E051F-2AAD-4607-A9F7-1B705E8EC304}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1ED61E4E-5A0E-43F3-8A8F-1123C9A0D6E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ED61E4E-5A0E-43F3-8A8F-1123C9A0D6E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ED61E4E-5A0E-43F3-8A8F-1123C9A0D6E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ED61E4E-5A0E-43F3-8A8F-1123C9A0D6E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
