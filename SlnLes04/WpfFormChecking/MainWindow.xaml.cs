@@ -80,9 +80,13 @@ namespace WpfFormChecking
             {
                 lblTotaalFouten.Content = "Dit formulier bevat 1 fout";
             }
-            else
+            else if (aantalFouten > 1)
             {
                 lblTotaalFouten.Content = $"Dit formulier bevat {aantalFouten} fouten";
+            }
+            else
+            {
+                lblTotaalFouten.Content = "Bedankt voor uw registratie";
             }
         }
 
