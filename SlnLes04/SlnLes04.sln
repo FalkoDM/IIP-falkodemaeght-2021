@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleRaden", "ConsoleRade
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleBestelling", "ConsoleBestelling\ConsoleBestelling.csproj", "{45752CE5-8453-4141-88C2-5B94D88AB888}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleEindcijfer", "ConsoleEindcijfer\ConsoleEindcijfer.csproj", "{4EB671A8-80BC-4BB3-B13D-E3A37E95526A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{45752CE5-8453-4141-88C2-5B94D88AB888}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45752CE5-8453-4141-88C2-5B94D88AB888}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45752CE5-8453-4141-88C2-5B94D88AB888}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EB671A8-80BC-4BB3-B13D-E3A37E95526A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EB671A8-80BC-4BB3-B13D-E3A37E95526A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EB671A8-80BC-4BB3-B13D-E3A37E95526A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EB671A8-80BC-4BB3-B13D-E3A37E95526A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
