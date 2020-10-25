@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleGGD", "ConsoleGGD\Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleBankautomaat", "ConsoleBankautomaat\ConsoleBankautomaat.csproj", "{38799E99-936D-4B3D-9E96-DF0AA441DF2C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleKlinkers", "ConsoleKlinkers\ConsoleKlinkers.csproj", "{A6AB0B25-3DB5-4FC3-A453-DCFD69DF24FB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{38799E99-936D-4B3D-9E96-DF0AA441DF2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38799E99-936D-4B3D-9E96-DF0AA441DF2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38799E99-936D-4B3D-9E96-DF0AA441DF2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6AB0B25-3DB5-4FC3-A453-DCFD69DF24FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6AB0B25-3DB5-4FC3-A453-DCFD69DF24FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6AB0B25-3DB5-4FC3-A453-DCFD69DF24FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6AB0B25-3DB5-4FC3-A453-DCFD69DF24FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
