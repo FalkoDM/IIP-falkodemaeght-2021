@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleSom", "ConsoleSom\Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleLancering", "ConsoleLancering\ConsoleLancering.csproj", "{D09F98E3-90E3-487A-8879-352611302275}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleRaden", "ConsoleRaden\ConsoleRaden.csproj", "{179EF70F-95FA-4944-BED0-D8E72E5C09CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D09F98E3-90E3-487A-8879-352611302275}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D09F98E3-90E3-487A-8879-352611302275}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D09F98E3-90E3-487A-8879-352611302275}.Release|Any CPU.Build.0 = Release|Any CPU
+		{179EF70F-95FA-4944-BED0-D8E72E5C09CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{179EF70F-95FA-4944-BED0-D8E72E5C09CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{179EF70F-95FA-4944-BED0-D8E72E5C09CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{179EF70F-95FA-4944-BED0-D8E72E5C09CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
