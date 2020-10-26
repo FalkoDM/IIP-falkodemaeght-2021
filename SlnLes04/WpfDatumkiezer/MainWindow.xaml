@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <DatePicker x:Name="dtp1" HorizontalAlignment="Left" Margin="64,47,0,0" VerticalAlignment="Top" Height="32" Width="189" FontSize="16" SelectedDateChanged="dtp1_SelectedDateChanged"/>
+        <Label x:Name="lbl1" Content="" HorizontalAlignment="Left" Margin="64,98,0,0" VerticalAlignment="Top" Height="37" Width="386" FontSize="16"/>
+        <DatePicker x:Name="dtp2" HorizontalAlignment="Left" Margin="64,167,0,0" VerticalAlignment="Top" Height="32" Width="189" FontSize="16" SelectedDateChanged="dtp2_SelectedDateChanged"/>
+        <Label x:Name="lbl2" Content="" HorizontalAlignment="Left" Margin="64,232,0,0" VerticalAlignment="Top" Height="37" Width="386" FontSize="16"/>
+
     </Grid>
 </Window>

@@ -24,5 +24,17 @@ namespace WpfDatumkiezer
         {
             InitializeComponent();
         }
+
+        private void dtp1_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
+        {
+            lbl1.Content = $"je selecteerde {dtp1.SelectedDate}";
+        }
+
+        private void dtp2_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+            DateTime date = Convert.ToDateTime(dtp2.SelectedDate);
+            lbl2.Content = $"je selecteerde {date.ToString("dd MMMM yyyy")}";
+        }
     }
 }
