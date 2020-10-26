@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfDatumkiezer", "WpfDatumk
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfGebruikersnaam", "WpfGebruikersnaam\WpfGebruikersnaam.csproj", "{A66CF950-F6D1-42C6-A0C9-D1E49AD8BFE1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfOxo", "WpfOxo\WpfOxo.csproj", "{B7786956-07B8-450F-A107-32195F4E9AEB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A66CF950-F6D1-42C6-A0C9-D1E49AD8BFE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A66CF950-F6D1-42C6-A0C9-D1E49AD8BFE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A66CF950-F6D1-42C6-A0C9-D1E49AD8BFE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7786956-07B8-450F-A107-32195F4E9AEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7786956-07B8-450F-A107-32195F4E9AEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7786956-07B8-450F-A107-32195F4E9AEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7786956-07B8-450F-A107-32195F4E9AEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

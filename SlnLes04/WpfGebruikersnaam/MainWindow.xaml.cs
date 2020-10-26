@@ -39,28 +39,28 @@ namespace WpfGebruikersnaam
             // als de gebruikersnaam een spatie bevat geef een foutmelding weer en verander background naar rood
             else if (txtNaam.Text.Contains(" "))
             {
-                lblFout.Content = "Gebruikersnaam mag geen spaties bevatten";
+                lblFout.Content = $"Gebruikersnaam mag geen spaties bevatten {Environment.NewLine}";
                 txtNaam.Background = new SolidColorBrush(Color.FromRgb(255, 102, 102));
             }
 
             // als de gebruikersnaam een "@" bevat geef dan een foutmelding weer en verander background naar rood
             else if (txtNaam.Text.Contains("@"))
             {
-                lblFout.Content = "Gebruikersnaam mag geen @ bevatten";
+                lblFout.Content = $"Gebruikersnaam mag geen @ bevatten {Environment.NewLine}";
                 txtNaam.Background = new SolidColorBrush(Color.FromRgb(255, 102, 102));
             }
 
             // als er geen hoofdletter aanwezig is geef dan een foutmelding weer en verander background naar rood
             else if (txtNaam.Text.Any(char.IsUpper) == false)
             {
-                lblFout.Content = "Gebruikersnaam moet een hoofdletter bevatten";
+                lblFout.Content = $"Gebruikersnaam moet een hoofdletter bevatten {Environment.NewLine}";
                 txtNaam.Background = new SolidColorBrush(Color.FromRgb(255, 102, 102));
             }
 
             // als er geen cijfer aanwezig is geef dan een foutmelding weer en verander de background naar rood
             else if (txtNaam.Text.Any(char.IsDigit) == false)
             {
-                lblFout.Content = "Gebruikersnaam moet minstens 1 cijfer bevatten";
+                lblFout.Content = $"Gebruikersnaam moet minstens 1 cijfer bevatten {Environment.NewLine}";
                 txtNaam.Background = new SolidColorBrush(Color.FromRgb(255, 102, 102));
             }
 
