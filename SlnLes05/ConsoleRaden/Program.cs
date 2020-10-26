@@ -10,36 +10,27 @@ namespace ConsoleRaden
     {
         static void Main(string[] args)
         {
-            // layout
-            Console.WriteLine("Geef een getal tussen 1 en 10");
-
-            // variabele pogingen, random getal om te raden en het getal ingegeven door de gebruiker
-            int poging = 0;
+            
+            // genereer een random getal
             Random rnd = new Random();
-            int randomGetal = rnd.Next(1, 11);
-            int getal;
+            int getal = rnd.Next(1, 10);
 
-            do
+            // registreer de input en converteer naar integer
+            Console.Write("Raad een getal tussen 1 en 10: ");
+            int gok = Convert.ToInt32(Console.ReadLine());
+
+            // definieer wat er moet gebeuren als er juist, te hoog of te laag gegokt is
+            if (gok == getal)
             {
-                // tel een pogingnr erbij, en converteer de gok van de gebruiker naar een integer om te vergelijken
-                poging++;
-                Console.Write($"Poging {poging}: ");
-                getal = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Juist geraden!");
             }
-
-            // doe dit zolang het pogingnummer kleiner is dan drie en het getal verschilt van het te raden getal (randomGetal)
-            while (poging < 3 && getal != randomGetal);
-
-            // als het getal geraden wordt 
-            if (getal == randomGetal)
+            else if (gok < getal)
             {
-                Console.WriteLine("Geraden");
+                Console.WriteLine("De gok was te laag!");
             }
-
-            // als het getal niet geraden wordt en de pogingen zijn opgebruikt
             else
             {
-                Console.WriteLine("Volgende keer beter");
+                Console.WriteLine("De gok was te hoog");
             }
             Console.ReadKey();
         }
