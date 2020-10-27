@@ -1,0 +1,19 @@
+﻿<Window x:Class="WpfOpties.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfOpties"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="#FFB8EAE0">
+        <Label Content="Waar heb je ons leren kennen?" HorizontalAlignment="Left" Margin="85,68,0,0" VerticalAlignment="Top" Height="33" Width="233" FontSize="16"/>
+        <Label Content="duid minstens één optie aan" HorizontalAlignment="Left" Margin="85,106,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <CheckBox x:Name="chbGoogle" Content="Gevonden via Google" HorizontalAlignment="Left" Margin="85,154,0,0" VerticalAlignment="Top" FontSize="14" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked"/>
+        <CheckBox x:Name="chbKennis" Content="Via een kennis / vriend" HorizontalAlignment="Left" Margin="85,177,0,0" VerticalAlignment="Top" FontSize="14" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked"/>
+        <CheckBox x:Name="chbAndere" Content="andere, namelijk..." HorizontalAlignment="Left" Margin="85,200,0,0" VerticalAlignment="Top" FontSize="14" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked"/>
+        <Image x:Name="imgChecked" HorizontalAlignment="Left" Height="50" Margin="323,51,0,0" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="txtAndere" HorizontalAlignment="Left" Height="27" Margin="104,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" FontSize="14" TextChanged="txt_TextChanged"/>
+
+    </Grid>
+</Window>

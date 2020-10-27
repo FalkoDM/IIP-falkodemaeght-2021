@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfOxo", "WpfOxo\WpfOxo.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfCalculatorTag", "WpfCalculatorTag\WpfCalculatorTag.csproj", "{0BC1BE60-C6B2-48E4-8E61-4C394D593121}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfOpties", "WpfOpties\WpfOpties.csproj", "{4DD6F6D2-E027-4102-AC89-5B958288FE90}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{0BC1BE60-C6B2-48E4-8E61-4C394D593121}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BC1BE60-C6B2-48E4-8E61-4C394D593121}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0BC1BE60-C6B2-48E4-8E61-4C394D593121}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DD6F6D2-E027-4102-AC89-5B958288FE90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DD6F6D2-E027-4102-AC89-5B958288FE90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DD6F6D2-E027-4102-AC89-5B958288FE90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DD6F6D2-E027-4102-AC89-5B958288FE90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
