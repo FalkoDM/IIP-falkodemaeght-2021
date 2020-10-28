@@ -32,9 +32,9 @@ namespace ConsoleMusicPlayer
                 Console.WriteLine("1. Pauze / Play");
                 Console.WriteLine("2. Volume wijzigen");
                 Console.WriteLine("3. Mute / Unmute");
-                Console.WriteLine("3. Nieuw liedje afspelen");
-                Console.WriteLine("4. Stoppen");
-                Console.WriteLine("5. Afsluiten");
+                Console.WriteLine("4. Nieuw liedje afspelen");
+                Console.WriteLine("5. Stoppen");
+                Console.WriteLine("6. Afsluiten");
                 Console.WriteLine("");
 
                 //geef het huidige volume weer in percentage en in aantal balkjes, gebruik for loop
@@ -51,7 +51,6 @@ namespace ConsoleMusicPlayer
                 Console.WriteLine("");
                 Console.Write("je keuze: ");
                 keuze = Console.ReadLine();
-                
                 Console.WriteLine("");
 
                     // switch case break methode om de keuze te bepalen en per keuze iets anders uit te voeren
