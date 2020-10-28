@@ -21,10 +21,10 @@ namespace ConsoleRaden
 
             do
             {
-                // tel een pogingnr erbij, en converteer de gok van de gebruiker naar een integer om te vergelijken
+                // tel een pogingnr erbij en lees de nieuwe poging in
                 poging++;
                 Console.Write($"Poging {poging}: ");
-                getal = Convert.ToInt32(Console.ReadLine());
+                int.TryParse(Console.ReadLine(), out getal);
             }
 
             // doe dit zolang het pogingnummer kleiner is dan drie en het getal verschilt van het te raden getal (randomGetal)

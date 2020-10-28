@@ -24,7 +24,8 @@ namespace ConsoleSom
                 // als het dan effectief verschilt van "q" zet om naar integer en voer bewerking uit
                 if (stop != "q")
                 {
-                    getal = Convert.ToInt32(stop);
+                    // tryparse vermijd dat het programma crashed als de gebruiker bvb een letter ingeeft
+                    int.TryParse(stop, out getal);
                     som += getal;
                 }
                 // als de input "q" is geef de som weer

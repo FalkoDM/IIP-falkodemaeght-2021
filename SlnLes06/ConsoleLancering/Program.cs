@@ -10,10 +10,14 @@ namespace ConsoleLancering
     {
         static void Main(string[] args)
         {
+            int seconden;
+
             // vraag de input van het aantal seconden en zet om naar integer
             Console.Write("Hoeveel seconden tot lancering? ");
-            int seconden = Convert.ToInt32(Console.ReadLine());
-
+            while (!int.TryParse(Console.ReadLine(), out seconden))
+            {
+                Console.Write("Hoeveel seconden tot lancering? ");
+            }
             // voor zolang de seonden hoger zijn dan 0 print aantal seconden...
             while (seconden > 0)
             {
