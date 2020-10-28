@@ -15,15 +15,26 @@ namespace ConsoleGGD
             Console.WriteLine("================================");
             Console.WriteLine("");
 
-            // vraag twee getallen van de user en zet ze om naar gehele getallen (integer)
-            Console.Write("Getal 1: ");
-            int getal1 = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Getal 2: ");
-            int getal2 = Convert.ToInt32(Console.ReadLine());
-
-            // declareer een extra variabele nodig voor de bewerking
+            // globale variabelen
+            int getal1;
+            int getal2;
             int ggd;
 
+            // vraag twee getallen van de user en controleer of ze wel gehele getallen zijn
+            Console.Write("Getal 1: ");
+            while (!int.TryParse(Console.ReadLine(), out getal1))
+            {
+                Console.WriteLine("");
+                Console.WriteLine("dit is geen geheel getal");
+                Console.Write("Getal 1: ");
+            }
+            Console.Write("Getal 2: ");
+            while (!int.TryParse(Console.ReadLine(), out getal2))
+            {
+                Console.WriteLine("");
+                Console.WriteLine("dit is geen geheel getal");
+                Console.Write("Getal 2: ");
+            }
 
             // als getal 1 groter is dan getal2 volg dan deze bewerking
             if (getal1 > getal2)
