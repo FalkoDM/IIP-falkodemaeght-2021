@@ -14,6 +14,9 @@ namespace ConsoleBankautomaat
             double saldo = 500;
             int pogingen = 3;
             int pincode;
+            string keuze;
+            double bedrag;
+
             // layout
             Console.WriteLine("Bankautomaat");
             Console.WriteLine("============");
@@ -35,13 +38,10 @@ namespace ConsoleBankautomaat
                     Console.WriteLine("je account wordt geblokkeerd");
                     Console.ReadKey();
                 }
-
-
             }
             // gebruiker geeft pincode in dat moet matchen aan 1234 en komt dan pas in bankmenu terecht
             if (pincode == 1234)
             {
-                string keuze;
                 do
                 {
                     // keuzemenu bankautomaat
@@ -58,7 +58,14 @@ namespace ConsoleBankautomaat
                         // switch case break methode om de keuze te bepalen en per keuze iets anders uit te voeren
                         case "a":
                             Console.Write("Welk bedrag wil je afhalen? ");
-                            double bedrag = Convert.ToDouble(Console.ReadLine());
+
+                            // zorg ervoor dat de gebruiker een bedrag ingeeft (vermijd crash)
+                            while (!double.TryParse(Console.ReadLine(), out bedrag))
+                            {
+                                Console.WriteLine("dit is geen geldig bedrag");
+                                Console.WriteLine("");
+                                Console.Write("Welk bedrag wil je afhalen? ");
+                            }
                             saldo -= bedrag;
 
                             // saldo mag niet onder nul zakken
@@ -76,7 +83,14 @@ namespace ConsoleBankautomaat
                             break;
                         case "b":
                             Console.Write("Welk bedrag wil je storten? ");
-                            bedrag = Convert.ToDouble(Console.ReadLine());
+
+                            // zorg ervoor dat de gebruiker een bedrag ingeeft (vermijd crash)
+                            while (!double.TryParse(Console.ReadLine(), out bedrag))
+                            {
+                                Console.WriteLine("dit is geen geldig bedrag");
+                                Console.WriteLine("");
+                                Console.Write("Welk bedrag wil je storten? ");
+                            }
                             saldo += bedrag;
                             Console.WriteLine($"Storting ok - het nieuwe saldo is {saldo}");
                             Console.WriteLine("");
@@ -88,7 +102,14 @@ namespace ConsoleBankautomaat
 
                             // uitbreiding pincode veranderen
                             Console.Write("Geef je nieuwe pincode: ");
-                            pincode = Convert.ToInt32(Console.ReadLine());
+
+                            // zorg ervoor dat de gebruiker een pincode ingeeft (vermijd crash)
+                            while (!int.TryParse(Console.ReadLine(), out pincode))
+                            {
+                                Console.WriteLine("dit is geen geldige pincode");
+                                Console.WriteLine("");
+                                Console.Write("Geef je nieuwe pincode:  ");
+                            }
                             Console.WriteLine($"Je nieuwe pincode is {pincode}");
                             Console.WriteLine("");
                             break;
