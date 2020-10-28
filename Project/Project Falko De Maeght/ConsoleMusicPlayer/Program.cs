@@ -14,6 +14,7 @@ namespace ConsoleMusicPlayer
            // Layout start
             Console.WriteLine("MEDIAPLAYER");
             Console.WriteLine("===========");
+            Console.WriteLine("");
             Console.Write("Bestand afspelen: ");
 
             // geef het pad in naar het liedje
@@ -24,11 +25,14 @@ namespace ConsoleMusicPlayer
             // initialiseer player
             WindowsMediaPlayer player = new WindowsMediaPlayer();
             player.URL = song;
-
+            Console.Clear();
 
             do
             {
                 // keuzemenu Music Player
+                Console.WriteLine("MEDIAPLAYER");
+                Console.WriteLine("===========");
+                Console.WriteLine("");
                 Console.WriteLine("1. Pauze / Play");
                 Console.WriteLine("2. Volume wijzigen");
                 Console.WriteLine("3. Mute / Unmute");
@@ -113,7 +117,7 @@ namespace ConsoleMusicPlayer
                         break;
                     case "5":
 
-                        // stop het liedje
+                        // stop het huidig liedje
                         player.controls.stop();
                         Console.Clear();
                         break;
@@ -121,6 +125,7 @@ namespace ConsoleMusicPlayer
 
                         // sluit de Music player af
                         Console.WriteLine("tot ziens");
+                        Console.ReadKey();
                         break;
 
                         // zorgt ervoor dat de gebruiker een geldige keuze ingeeft
@@ -131,8 +136,7 @@ namespace ConsoleMusicPlayer
                         break;
                 }
             }
-            while (keuze != "6");
-            
+            while (keuze != "6");          
         }
     }
 }
