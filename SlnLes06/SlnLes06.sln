@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleKlinkers", "ConsoleK
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleOnderBoven", "ConsoleOnderBoven\ConsoleOnderBoven.csproj", "{F80A93B3-266F-4A64-9497-0BB4D6D52C2C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfPriemgetal", "WpfPriemgetal\WpfPriemgetal.csproj", "{5B840E04-D9F6-41F0-BCEB-5ED18AB12D11}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{F80A93B3-266F-4A64-9497-0BB4D6D52C2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F80A93B3-266F-4A64-9497-0BB4D6D52C2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F80A93B3-266F-4A64-9497-0BB4D6D52C2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B840E04-D9F6-41F0-BCEB-5ED18AB12D11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B840E04-D9F6-41F0-BCEB-5ED18AB12D11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B840E04-D9F6-41F0-BCEB-5ED18AB12D11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B840E04-D9F6-41F0-BCEB-5ED18AB12D11}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

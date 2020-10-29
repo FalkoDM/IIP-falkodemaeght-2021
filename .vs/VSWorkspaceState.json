@@ -1,9 +1,11 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Project",
     "\\Project\\Project Falko De Maeght",
-    "\\SlnLes06"
+    "\\SlnLes06",
+    "\\SlnLes06\\ConsoleBankautomaat"
   ],
-  "SelectedNode": "\\SlnLes06\\SlnLes06.sln",
+  "SelectedNode": "\\Project\\Project Falko De Maeght\\Project Falko De Maeght.sln",
   "PreviewInSolutionExplorer": false
 }
