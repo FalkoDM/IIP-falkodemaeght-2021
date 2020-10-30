@@ -44,17 +44,26 @@ namespace ConsoleMusicPlayer
                 //geef het huidige volume weer in percentage en in aantal balkjes, gebruik for loop
                 int huidigVolume = player.settings.volume;
                 Console.WriteLine($"Het huidige volume is {huidigVolume}%");
-                Console.WriteLine($"{huidigVolume / 5} balkjes");
-                for (; huidigVolume>=0 && huidigVolume <= 100; huidigVolume -= 5)
+
+                // berekening aantal balkjes bepalen
+                var aantalBalken = huidigVolume / 5;
+                Console.WriteLine($"{aantalBalken} balkjes");
+
+                // for loop aantal balkjes weergeven
+                for (int i = 0; i < aantalBalken; i++)
                 {
                     Console.Write("# ");
-                }
+
+                }             
                 Console.WriteLine("");
                 Console.WriteLine("");
                 Console.WriteLine($" het liedje dat wordt afgespeeld is {song}");
                 Console.WriteLine("");
                 Console.Write("je keuze: ");
-                keuze = Console.ReadLine();
+
+                // convert consolekeyinfo naar string keuze
+                var key = Console.ReadKey();
+                keuze = key.KeyChar.ToString();
                 Console.WriteLine("");
 
                     // switch case break methode om de keuze te bepalen en per keuze iets anders uit te voeren
@@ -80,7 +89,7 @@ namespace ConsoleMusicPlayer
                         // gebruik een while loop tot je een correcte waarde voor volume hebt verkregen van de gebruiker
                         int nieuwVolume;
                         Console.Write("Geef een nieuw volume: ");
-                        while (!int.TryParse(Console.ReadLine(), out nieuwVolume))
+                        while (!int.TryParse(Console.ReadLine(), out nieuwVolume) || nieuwVolume > 100 || nieuwVolume < 0)
                         {
                             Console.WriteLine("Dit is geen correcte waarde voor het volume ");
                             Console.Write("geef een nieuw volume: ");
