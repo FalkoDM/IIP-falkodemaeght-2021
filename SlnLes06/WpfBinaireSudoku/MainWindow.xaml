@@ -1,0 +1,71 @@
+﻿<Window x:Class="WpfBinaireSudoku.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfBinaireSudoku"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="38*"/>
+            <ColumnDefinition Width="359*"/>
+        </Grid.ColumnDefinitions>
+        <Grid x:Name="grdGame" HorizontalAlignment="Left" Height="150" Margin="90.923,91,0,0" VerticalAlignment="Top" Width="150" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="25"/>
+                <ColumnDefinition Width="25"/>
+                <ColumnDefinition Width="11.894"/>
+                <ColumnDefinition Width="12.906"/>
+                <ColumnDefinition Width="25"/>
+                <ColumnDefinition Width="25"/>
+                <ColumnDefinition Width="25"/>
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Row="0" Grid.Column="0" Text="1" IsReadOnly="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Grid.ColumnSpan="2" Margin="0,0,25.2,25.2" Grid.RowSpan="2"/>
+            <TextBox Grid.Row="0" Grid.Column="1" Text="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Grid.ColumnSpan="2" Margin="0.4,0,11.094,25.2" Grid.RowSpan="2"/>
+            <TextBox Grid.Row="0" Grid.Column="1" Text="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Grid.ColumnSpan="3" Margin="25.4,0,0,25.2" Grid.RowSpan="2"/>
+            <TextBox Grid.Row="0" Grid.Column="4" Text="0" IsReadOnly="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Grid.ColumnSpan="2" Margin="0,0,24.6,25.2" Grid.RowSpan="2"/>
+            <TextBox Grid.Row="0" Grid.Column="5" Text="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Grid.ColumnSpan="2" Margin="0.2,0,24.4,25.2" Grid.RowSpan="2"/>
+            <TextBox Grid.Row="0" Grid.Column="6" Text="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Margin="0.4,0,-0.6,25.2" Grid.RowSpan="2"/>
+            <TextBox Grid.Row="1" Grid.Column="0" Text="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Grid.ColumnSpan="2" Margin="0,0.4,25.2,24" Grid.RowSpan="2"/>
+            <TextBox Grid.Row="1" Grid.Column="1" Text="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Grid.ColumnSpan="2" Margin="0.4,0.4,11.094,24" Grid.RowSpan="2"/>
+            <TextBox Grid.Row="1" Grid.Column="1" Text="0" IsReadOnly="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Grid.ColumnSpan="3" Margin="25.4,0.4,0,24" Grid.RowSpan="2"/>
+            <TextBox Grid.Row="1" Grid.Column="4" Text="0" IsReadOnly="true" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Grid.ColumnSpan="2" Margin="0,0.4,24.6,24" Grid.RowSpan="2"/>
+            <TextBox Grid.Row="1" Grid.Column="5" Text="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Grid.ColumnSpan="2" Margin="0.2,0.4,24.4,24" Grid.RowSpan="2"/>
+            <TextBox Grid.Row="1" Grid.Column="6" Text="1" IsReadOnly="true" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Margin="0.4,0.4,-0.6,24" Grid.RowSpan="2"/>
+            <TextBox Grid.Row="1" Grid.Column="0" Text="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Grid.ColumnSpan="2" Margin="0,25.4,25.2,0" Grid.RowSpan="2"/>
+            <TextBox Grid.Row="1" Grid.Column="1" Text="0" IsReadOnly="true" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Grid.ColumnSpan="2" Margin="0.4,25.4,11.094,0" Grid.RowSpan="2"/>
+            <TextBox Grid.Row="1" Grid.Column="1" Text="0" IsReadOnly="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Grid.ColumnSpan="3" Margin="25.4,25.4,0,0" Grid.RowSpan="2"/>
+            <TextBox Grid.Row="1" Grid.Column="4" Text="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Grid.ColumnSpan="2" Margin="0,25.4,24.6,0" Grid.RowSpan="2"/>
+            <TextBox Grid.Row="1" Grid.Column="5" Text="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Grid.ColumnSpan="2" Margin="0.2,25.4,24.4,0" Grid.RowSpan="2"/>
+            <TextBox Grid.Row="1" Grid.Column="6" Text="1" IsReadOnly="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Margin="0.4,25.4,-0.6,0" Grid.RowSpan="2"/>
+            <TextBox Grid.Row="3" Grid.Column="0" Text="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Grid.ColumnSpan="2" Margin="0,0,25.2,24.6" Grid.RowSpan="2"/>
+            <TextBox Grid.Row="3" Grid.Column="1" Text="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Grid.ColumnSpan="2" Margin="0.4,0,11.094,24.6" Grid.RowSpan="2"/>
+            <TextBox Grid.Row="3" Grid.Column="1" Text="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Grid.ColumnSpan="3" Margin="25.4,0,0,24.6" Grid.RowSpan="2"/>
+            <TextBox Grid.Row="3" Grid.Column="4" Text="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Grid.ColumnSpan="2" Margin="0,0,24.6,24.6" Grid.RowSpan="2"/>
+            <TextBox Grid.Row="3" Grid.Column="5" Text="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Grid.ColumnSpan="2" Margin="0.2,0,24.4,24.6" Grid.RowSpan="2"/>
+            <TextBox Grid.Row="3" Grid.Column="6" Text="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Margin="0.4,0,-0.6,24.6" Grid.RowSpan="2"/>
+            <TextBox Grid.Row="4" Grid.Column="0" Text="0" IsReadOnly="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Grid.ColumnSpan="2" Margin="0,0.2,25.2,24.4" Grid.RowSpan="2"/>
+            <TextBox Grid.Row="4" Grid.Column="1" Text="0" IsReadOnly="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Grid.ColumnSpan="2" Margin="0.4,0.2,11.094,24.4" Grid.RowSpan="2"/>
+            <TextBox Grid.Row="4" Grid.Column="1" Text="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Grid.ColumnSpan="3" Margin="25.4,0.2,0,24.4" Grid.RowSpan="2"/>
+            <TextBox Grid.Row="4" Grid.Column="4" Text="1" IsReadOnly="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Grid.ColumnSpan="2" Margin="0,0.2,24.6,24.4" Grid.RowSpan="2"/>
+            <TextBox Grid.Row="4" Grid.Column="5" Text="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Grid.ColumnSpan="2" Margin="0.2,0.2,24.4,24.4" Grid.RowSpan="2"/>
+            <TextBox Grid.Row="4" Grid.Column="6" Text="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Margin="0.4,0.2,-0.6,24.4" Grid.RowSpan="2"/>
+            <TextBox Grid.Row="5" Grid.Column="0" Text="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Grid.ColumnSpan="2" Margin="0,0.4,25.2,-0.6"/>
+            <TextBox Grid.Row="5" Grid.Column="1" Text="1" IsReadOnly="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Grid.ColumnSpan="2" Margin="0.4,0.4,11.094,-0.6"/>
+            <TextBox Grid.Row="5" Grid.Column="1" Text="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Grid.ColumnSpan="3" Margin="25.4,0.4,0,-0.6"/>
+            <TextBox Grid.Row="5" Grid.Column="4" Text="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Grid.ColumnSpan="2" Margin="0,0.4,24.6,-0.6"/>
+            <TextBox Grid.Row="5" Grid.Column="5" Text="0" IsReadOnly="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Grid.ColumnSpan="2" Margin="0.2,0.4,24.4,-0.6"/>
+            <TextBox Grid.Row="5" Grid.Column="6" Text="0" IsReadOnly="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Margin="0.4,0.4,-0.6,-0.6"/>
+        </Grid>
+        <Button x:Name="btnCheck" Content="CHECK" HorizontalAlignment="Left" Margin="154.923,261,0,0" VerticalAlignment="Top" Width="86" Height="28" FontSize="16" Click="btnCheck_Click" Grid.Column="1"/>
+    </Grid>
+</Window>
