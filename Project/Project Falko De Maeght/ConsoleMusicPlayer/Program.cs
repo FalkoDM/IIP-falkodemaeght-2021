@@ -45,9 +45,9 @@ namespace ConsoleMusicPlayer
                 int huidigVolume = player.settings.volume;
                 Console.WriteLine($"Het huidige volume is {huidigVolume}%");
 
-                // berekening aantal balkjes bepalen
+                // berekening aantal balkjes
                 var aantalBalken = huidigVolume / 5;
-                Console.WriteLine($"{aantalBalken} balkjes");
+                Console.Write($"{aantalBalken} balkjes: ");
 
                 // for loop aantal balkjes weergeven
                 for (int i = 0; i < aantalBalken; i++)
@@ -61,7 +61,7 @@ namespace ConsoleMusicPlayer
                 Console.WriteLine("");
                 Console.Write("je keuze: ");
 
-                // convert consolekeyinfo naar string keuze
+                // convert consolekeyinfo naar string keuze ga verder zonder Enter te duwen
                 var key = Console.ReadKey();
                 keuze = key.KeyChar.ToString();
                 Console.WriteLine("");
@@ -82,7 +82,6 @@ namespace ConsoleMusicPlayer
                         player.controls.play();
                         klik = 0;
                         }
-                        Console.Clear();
                         break;
                     case "2":
 
@@ -95,7 +94,6 @@ namespace ConsoleMusicPlayer
                             Console.Write("geef een nieuw volume: ");
                         }
                         player.settings.volume = nieuwVolume;
-                        Console.Clear();
                         break;
 
                         // gebruik dezelfde methode als case 1 maar dna om te muten / unmuten
@@ -111,7 +109,6 @@ namespace ConsoleMusicPlayer
                             player.settings.mute = false;
                             klik = 0;
                         }
-                        Console.Clear();
                         break;
 
                     case "4":
@@ -122,28 +119,24 @@ namespace ConsoleMusicPlayer
                         var musicFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyMusic);
                         player.URL = System.IO.Path.Combine(musicFolder, $"{newSong}.mp3");
                         song = newSong;
-                        Console.Clear();
                         break;
                     case "5":
 
                         // stop het huidig liedje
                         player.controls.stop();
-                        Console.Clear();
                         break;
                     case "6":
 
                         // sluit de Music player af
                         Console.WriteLine("tot ziens");
-                        Console.ReadKey();
                         break;
 
                         // zorgt ervoor dat de gebruiker een geldige keuze ingeeft
                     default:
                         Console.WriteLine("Ongeldige keuze! Druk enter om terug te keren naar het vorige menu");
-                        Console.ReadKey();
-                        Console.Clear();
                         break;
                 }
+                Console.Clear();
             }
             while (keuze != "6");          
         }
