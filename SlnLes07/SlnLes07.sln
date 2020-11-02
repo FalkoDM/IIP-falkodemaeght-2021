@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleSchrikkeljaar", "Con
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTemperatuur", "ConsoleTemperatuur\ConsoleTemperatuur.csproj", "{CE0ED1E9-157E-43B8-AE47-8D63A81915D1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfCarConfigurator", "WpfCarConfigurator\WpfCarConfigurator.csproj", "{C8D905F8-4A6C-460B-8290-B6DB2C60EC03}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{CE0ED1E9-157E-43B8-AE47-8D63A81915D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE0ED1E9-157E-43B8-AE47-8D63A81915D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE0ED1E9-157E-43B8-AE47-8D63A81915D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8D905F8-4A6C-460B-8290-B6DB2C60EC03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8D905F8-4A6C-460B-8290-B6DB2C60EC03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8D905F8-4A6C-460B-8290-B6DB2C60EC03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8D905F8-4A6C-460B-8290-B6DB2C60EC03}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
