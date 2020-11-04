@@ -23,7 +23,6 @@ namespace ConsoleMusicPlayer
             WindowsMediaPlayer player = new WindowsMediaPlayer();
 
             // alle variabelen die worden gebruikt om keuzes of kliks van de gebruiker bij te houden
-            // of globale variabele zoals musicfolder en newSong die in meerdere plaatsten herbruikt worden
             string keuze = "";
             int klik = 0;
             int index = 0;
