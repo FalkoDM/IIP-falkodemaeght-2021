@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
 using System.Linq;
@@ -10,6 +11,17 @@ namespace ConsoleMusicPlayer
 {
     class Program
     {
+        // methode om een positief geheel getal te verkrijgen (vermijd crash mediaplayer)
+        static private int GetInt()
+        {
+            int index;
+            while (!int.TryParse(Console.ReadLine(), out index) || index < 0)
+            {
+                Console.WriteLine("");
+                Console.Write("Geef een correcte waarde: ");
+            }
+            return index;
+        }
 
         // methode om de musicplayer aan te spreken en een liedje af te spelen
         static private void GetSong(string newSong, WindowsMediaPlayer player)
@@ -17,6 +29,7 @@ namespace ConsoleMusicPlayer
             var musicFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyMusic);
             player.URL = System.IO.Path.Combine(musicFolder, $"{newSong}.mp3");
         }
+
         static void Main(string[] args)
         {
             // initialiseer player
@@ -45,7 +58,7 @@ namespace ConsoleMusicPlayer
             do
             {
 
-                //geef het huidige volume weer in percentage en in aantal balkjes, gebruik for loop
+                //geef het huidige volume weer in percentage en in aantal balkjes
                 int huidigVolume = player.settings.volume;
                 Console.WriteLine($"Het huidige volume is {huidigVolume}%");
 
@@ -130,17 +143,13 @@ namespace ConsoleMusicPlayer
                                 Console.WriteLine("");
 
                                 // vraag de gebruiker om het indexnummer van het liedje in te geven, 
-                                // bij verkeerde ingave vraag nog eens om de correcte waarde in te geven
+                                // gebruik methode GetInt om te checken of het wel een correcte waarde is
                                 Console.Write("geef een liedje om af te spelen: ");
-                                while (!int.TryParse(Console.ReadLine(), out index))
-                                {
-                                    Console.WriteLine("");
-                                    Console.Write("Geef het correcte nummer om het liedje af te spelen: ");
-                                }
+                                index = GetInt();
 
-                                // als de gebruker een nummer ingeeft lager dan de maximale index speel het nummer dan af
-                                // vermijd dat de music player crashed bij een te hoge ingave
-                                if (index <= maxIndex)
+                                // als de gebruker een nummer ingeeft lager dan de maximale index speel het nummer dan af en groter dan 0
+                                // vermijd dat de music player crashed bij een te hoge of te lage ingave
+                                if (index <= maxIndex && index >= 0)
                                 {
                                     newSong = song[index];
 
@@ -201,6 +210,8 @@ namespace ConsoleMusicPlayer
                                 // doe hetzelfde als voorgaande case maar nu om een listItem te verwijderen
                                 Console.WriteLine("");
                                 Console.WriteLine("");
+
+                                // display voor het gemak van de gebruiker eerst de playlist opnieuw
                                 foreach (string nummer in song)
                                 {
                                     Console.WriteLine($"{song.IndexOf(nummer)}: {nummer}");
@@ -215,15 +226,28 @@ namespace ConsoleMusicPlayer
                             case "6":
                                 Console.WriteLine("");
                                 Console.WriteLine("");
+
+                                // display voor het gemak van de gebruiker de playlist opnieuw
                                 foreach (string nummer in song)
                                 {
                                     Console.WriteLine($"{song.IndexOf(nummer)}: {nummer}");
                                 }
+
+                                // gebruik de methode GetInt om een positief geheel getal te verkrijgen van de gebruiker
                                 Console.WriteLine("");
                                 Console.Write("Geef het nummer dat je van plaats wilt veranderen: ");
-                                int nummer1 = Convert.ToInt32(Console.ReadLine());
-                                Console.Write("Geef het nummer naar waar je het wilt verplaatsen");
-                                int nummer2 = Convert.ToInt32(Console.ReadLine());
+                                int nummer1 = GetInt();
+                                Console.Write("Geef het nummer naar waar je het wilt verplaatsen: ");
+                                int nummer2 = GetInt();
+
+                                //  sla de tweede ingave op in een variabele
+                                var temp = song[nummer2];
+
+                                // doe de switch
+                                song[nummer2] = song[nummer1];
+
+                                // stel het eerste nummer gelijk aan de variabele
+                                song[nummer1] = temp;
                                 break;
 
                                 // bij keuze zeven wordt er automatisch teruggekeerd naar het vorige menu
