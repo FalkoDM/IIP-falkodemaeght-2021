@@ -8,24 +8,6 @@ namespace ConsoleFaculteit
 {
     class Program
     {
-        // methode voor berekenen faculteit
-        static private int Faculteit(int n)
-        {
-            // variabele resultaat
-            int resultaat = 1;
-
-            // zolang het ingegeven getal groter is dan 1 dan is het resultaat * het ingegeven getal trek er eentje af en ga terug rond
-            // het nieuwe resultaat is dan het vorige resultaat * het getal - 1 enzoverder.
-            while (n > 1)
-            {
-                resultaat *= n;
-                n--;
-            }
-
-            // deze methode returned dan het eindresultaat
-            return resultaat;
-    
-        }
         static void Main(string[] args)
         {
 
@@ -43,7 +25,21 @@ namespace ConsoleFaculteit
             // display het resultaat in de console
             Console.WriteLine($"de faculteit van {getal} = {resultaat}");
             Console.ReadKey();
+        }
 
+        // methode voor berekenen faculteit
+        static private int Faculteit(int n)
+        {
+            // variabele resultaat
+            int resultaat = 1;
+
+            // het nieuwe resultaat is dan het vorige resultaat * het getal - 1 enzoverder.
+            while (n > 1)
+            {
+                resultaat *= n;
+                n--;
+            }
+            return resultaat;
         }
     }
 }

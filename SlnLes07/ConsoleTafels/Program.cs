@@ -8,6 +8,17 @@ namespace ConsoleTafels
 {
     class Program
     {
+        static void Main(string[] args)
+        {
+            // geef getal in -> check met methode -> geef lengte in -> check mmet methode -> methode DrukTafel voor de weergave
+            Console.Write("Geef een getal: ");
+            int getal = VraagPositiefGetal();
+            Console.Write("Geef een lengte: ");
+            int lengte = VraagPositiefGetal();
+            DrukTafel(getal, lengte);
+            Console.ReadKey();
+        }
+
         // methode positief geheel getal checken
         static private int VraagPositiefGetal()
         {
@@ -18,13 +29,10 @@ namespace ConsoleTafels
                 Console.WriteLine("");
                 Console.Write("Geef een nieuwe waarde in: ");
             }
-
-            // private int verwacht altijd een return
-            return getal;
-            
+            return getal;           
         }
 
-        // methode tafel afdrukken in console, void verwacht geen return
+        // methode tafel afdrukken in console
         static private void DrukTafel(int getal, int lengte)
         {
             // variabele resultaat
@@ -35,18 +43,7 @@ namespace ConsoleTafels
             {
                 resultaat = i * getal;
                 Console.WriteLine($"{getal} x {i} = {resultaat}");
-            }
-            
-        }
-        static void Main(string[] args)
-        {
-            // geef getal in -> check met methode -> geef lengte in -> check mmet methode -> methode DrukTafel voor de weergave
-            Console.Write("Geef een getal: ");
-            int getal = VraagPositiefGetal();
-            Console.Write("Geef een lengte: ");
-            int lengte = VraagPositiefGetal();
-            DrukTafel(getal, lengte);
-            Console.ReadKey();         
+            }           
         }
     }
 }

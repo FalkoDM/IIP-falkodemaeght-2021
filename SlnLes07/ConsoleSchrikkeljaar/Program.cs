@@ -8,6 +8,22 @@ namespace ConsoleSchrikkeljaar
 {
     class Program
     {
+        static void Main(string[] args)
+        {
+            // variabele
+            int jaartal;
+
+            // blijf de gebruiker om een jaartal vragen tot die een ingeeft die nul of lager is dan nul
+            do
+            {
+                Console.Write("Geef een jaartal: ");
+                int.TryParse(Console.ReadLine(), out jaartal);
+                BerekenSchrikkeljaar(jaartal); // <-- roep de methode op na inlezen getal
+            }
+            while (jaartal > 0);
+            Console.ReadKey();
+        }
+
         // methode om na te gaan of het een schrikkeljaar is of niet
         static private void BerekenSchrikkeljaar(int jaartal)
         {
@@ -20,22 +36,6 @@ namespace ConsoleSchrikkeljaar
             {
                 Console.WriteLine($"Het jaar {jaartal} is geen schrikkeljaar.");
             }
-        }
-
-        static void Main(string[] args)
-        {
-            // variabele
-            int jaartal;
-
-            // blijf de gebruiker om een jaartal vragen tot die een ingeeft die nul of lager is dan nul
-            do 
-            {
-                Console.Write("Geef een jaartal: ");
-                int.TryParse(Console.ReadLine(), out jaartal);
-                BerekenSchrikkeljaar(jaartal); // <-- roep de methode op na inlezen getal
-            }
-            while (jaartal > 0);
-            Console.ReadKey();
         }
     }
 }

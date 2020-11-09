@@ -29,10 +29,10 @@ namespace WpfEllipsen__3_
             // class random getal 
             Random rnd = new Random();
 
-            // variabelen die de lblcontent opslaan bij de klik op de button
-            int maxCirkels = Convert.ToInt32(lblcirkels.Content);
-            int maxRadius = Convert.ToInt32(lblMaxRadius.Content);
-            int minRadius = Convert.ToInt32(lblMinRadius.Content);
+            // variabelen die de slider value opslaan bij de klik op de button
+            int maxCirkels = Convert.ToInt32(sldCirkels.Value);
+            int maxRadius = Convert.ToInt32(sldMaxRadius.Value);
+            int minRadius = Convert.ToInt32(sldMinRadius.Value);
 
             // zolang de maxRadius groter of gelijk is aan de minRadius, genereer dan de ellipsen
             if (maxRadius >= minRadius)

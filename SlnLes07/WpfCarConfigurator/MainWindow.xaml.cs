@@ -26,25 +26,58 @@ namespace WpfCarConfigurator
             InitializeComponent();
         }
 
+        // laad de images voor de accessoires op
+        private void Image_Loaded(object sender, RoutedEventArgs e)
+        {
+            Image img = (Image)sender;
+            imgBose.Source = new BitmapImage(new Uri("Images/bose speaker.jpg", UriKind.Relative));
+            imgMat.Source = new BitmapImage(new Uri("Images/car mat.jpg", UriKind.Relative));
+            imgVelg.Source = new BitmapImage(new Uri("Images/alloyrim.jpg", UriKind.Relative));
+        }
+
+        // roep de gemaakte methodes op per event
+        private void cmbModel_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            UpdateUI();
+            lblPrijs.Content = $"{BerekenPrijs()} euro";
+        }
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            RadioButton rbn = (RadioButton)sender;
+            UpdateUI();
+            lblPrijs.Content = $"{BerekenPrijs()} euro";
+        }
+        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            CheckBox chx = (CheckBox)sender;
+            UpdateUI();
+            lblPrijs.Content = $"{BerekenPrijs()} euro";
+        }
+        private void CheckBox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            CheckBox chx = (CheckBox)sender;
+            UpdateUI();
+            lblPrijs.Content = $"{BerekenPrijs()} euro";
+        }
         // methode prijs berekening
         private int BerekenPrijs()
         {
             // variabelen om de prijs per keuze optie te berekenen
-            int totaalPrijs = 0;
+            int totaalPrijs;
             int prijsModel = 0;
             int prijsAcc = 0;
-            int prijsKleur = 0;
+            int prijsKleur;
 
             // prijs model
-            if (cmbContinental.IsSelected == true)
+            if (cmbContinental.IsSelected)
             {
                 prijsModel = 85000;
             }
-            else if (cmbConvertible.IsSelected == true)
+            if (cmbConvertible.IsSelected)
             {
                 prijsModel = 72000;
             }
-            else if (cmbMulsanne.IsSelected == true)
+            if (cmbMulsanne.IsSelected)
             {
                 prijsModel = 65300;
             }
@@ -106,16 +139,16 @@ namespace WpfCarConfigurator
                     break;
             }
 
-            // if else structuur om na te gaan welke kleur geselecteerd is
+            // if structuur om na te gaan welke kleur geselecteerd is
             if (rbnBlauw.IsChecked == true)
             {
                 kleur = "blue";
             }
-            else if (rbnGroen.IsChecked == true)
+            if (rbnGroen.IsChecked == true)
             {
                 kleur = "green";
             }
-            else if (rbnRood.IsChecked == true)
+            if (rbnRood.IsChecked == true)
             {
                 kleur = "red";
             }
@@ -148,40 +181,6 @@ namespace WpfCarConfigurator
             {
                 imgVelg.Opacity = 0.2;
             }
-        }
-            
-        // laad de images voor de accessoires op
-        private void Image_Loaded(object sender, RoutedEventArgs e)
-        {
-            Image img = (Image)sender;
-            imgBose.Source = new BitmapImage(new Uri("Images/bose speaker.jpg", UriKind.Relative));
-            imgMat.Source = new BitmapImage(new Uri("Images/car mat.jpg", UriKind.Relative));
-            imgVelg.Source = new BitmapImage(new Uri("Images/alloyrim.jpg", UriKind.Relative));
-        }
-
-        // roep de gemaakte methodes op per event
-        private void cmbModel_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            UpdateUI();
-            lblPrijs.Content =$"{BerekenPrijs()} euro";
-        }
-        private void RadioButton_Checked(object sender, RoutedEventArgs e)
-        {
-            RadioButton rbn = (RadioButton)sender;
-            UpdateUI();
-            lblPrijs.Content = $"{BerekenPrijs()} euro";
-        }
-        private void CheckBox_Checked(object sender, RoutedEventArgs e)
-        {
-            CheckBox chx = (CheckBox)sender;
-            UpdateUI();
-            lblPrijs.Content = $"{BerekenPrijs()} euro";
-        }
-        private void CheckBox_Unchecked(object sender, RoutedEventArgs e)
-        {
-            CheckBox chx = (CheckBox)sender;
-            UpdateUI();
-            lblPrijs.Content = $"{BerekenPrijs()} euro";
-        }
+        }     
     }
 }
