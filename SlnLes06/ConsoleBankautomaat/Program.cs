@@ -66,18 +66,17 @@ namespace ConsoleBankautomaat
                                 Console.WriteLine("");
                                 Console.Write("Welk bedrag wil je afhalen? ");
                             }
-                            saldo -= bedrag;
 
                             // saldo mag niet onder nul zakken
-                            if (saldo >= 0)
+                            if (bedrag <= saldo)
                             {
+                                saldo -= bedrag;
                                 Console.WriteLine($"Afhaling ok - het nieuwe saldo is {saldo}");
                                 Console.WriteLine("");
                             }
                             else
                             {
                                 Console.WriteLine("saldo is ontoereikend");
-                                saldo += bedrag;
                                 Console.WriteLine("");
                             }
                             break;

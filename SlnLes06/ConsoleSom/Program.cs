@@ -11,22 +11,20 @@ namespace ConsoleSom
         static void Main(string[] args)
         {
             // variabelen 
-            int getal;
-            string stop = "";
             int som = 0;
-            
-            // zolang de ingegeven waarde verschilt van "q" lees de waarde in
-            while (stop != "q")
+            string getal;
+            int getalSom;
+            do
             {
                 Console.Write("Voer een getal in (q om te stoppen): ");
-                stop = Console.ReadLine();
+                getal = Console.ReadLine();
 
-                // als het dan effectief verschilt van "q" zet om naar integer en voer bewerking uit
-                if (stop != "q")
+                // als het getal verschilt van "q" zet om naar integer en voer bewerking uit
+                if (getal != "q")
                 {
-                    // tryparse vermijd dat het programma crashed als de gebruiker bvb een letter ingeeft
-                    int.TryParse(stop, out getal);
-                    som += getal;
+                    // tryparse vermijd dat het programma crashed als de gebruiker bvb een andere letter dan q ingeeft
+                    int.TryParse(getal, out getalSom);
+                    som += getalSom;
                 }
                 // als de input "q" is geef de som weer
                 else
@@ -34,6 +32,7 @@ namespace ConsoleSom
                     Console.WriteLine($"de som is {som}");
                 }
             }
+            while (getal != "q");
             Console.ReadKey();
         }
 

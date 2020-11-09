@@ -21,6 +21,7 @@ namespace ConsoleKlinkers
             int countVowel = 0;
             int countConsonant = 0;
             int countWords = 0;
+            string volgende = "";
 
             foreach (char c in tekst)
             {
@@ -31,11 +32,11 @@ namespace ConsoleKlinkers
                 // tel er eentje bij
                 a++;
 
-                // zet opnieuw om en vervang de oude value met de nieuwe value 
-                tekst = tekst.Replace(c, Convert.ToChar(a));
+                // bouw de string op door elke char opnieuw om te zetten
+                volgende += Convert.ToString(a);
 
                 // behoudt de spaties
-                tekst = tekst.Replace("!", " ");
+                volgende = volgende.Replace("!", " ");
 
                 // tel de spaties, klinkers en medeklinkers.
                 if (c == ' ') countWords++;
@@ -46,7 +47,6 @@ namespace ConsoleKlinkers
                 else if (c == 'u') countVowel++;
                 else countConsonant++;
             }
-
             // schrijf alles uit
 
             Console.WriteLine();
@@ -54,7 +54,7 @@ namespace ConsoleKlinkers
             Console.WriteLine($"Deze tekst bevat {countConsonant} medeklinkers");
             Console.WriteLine($"Deze tekst bevat {countConsonant + countVowel} letters");
             Console.WriteLine($"Deze tekst bevat {countWords + 1} woorden");
-            Console.WriteLine($"In geheimschrift: {tekst}");
+            Console.WriteLine($"In geheimschrift: {volgende}");
             Console.ReadKey();
         }
     }

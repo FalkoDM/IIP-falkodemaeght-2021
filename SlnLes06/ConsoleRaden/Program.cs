@@ -18,7 +18,6 @@ namespace ConsoleRaden
             Random rnd = new Random();
             int randomGetal = rnd.Next(1, 11);
             int getal;
-
             do
             {
                 // tel een pogingnr erbij en lees de nieuwe poging in
@@ -26,7 +25,6 @@ namespace ConsoleRaden
                 Console.Write($"Poging {poging}: ");
                 int.TryParse(Console.ReadLine(), out getal);
             }
-
             // doe dit zolang het pogingnummer kleiner is dan drie en het getal verschilt van het te raden getal (randomGetal)
             while (poging < 3 && getal != randomGetal);
 
@@ -35,7 +33,6 @@ namespace ConsoleRaden
             {
                 Console.WriteLine("Geraden");
             }
-
             // als het getal niet geraden wordt en de pogingen zijn opgebruikt
             else
             {
