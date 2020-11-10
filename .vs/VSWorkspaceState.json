@@ -1,14 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Project",
     "\\Project\\Project Falko De Maeght",
     "\\Project\\Project Falko De Maeght\\ConsoleMusicPlayer",
     "\\Project\\Project Falko De Maeght\\WpfMusicPlayer",
-    "\\SlnLes06",
-    "\\SlnLes06\\ConsoleBankautomaat",
-    "\\SlnLes07"
+    "\\SlnLes06\\ConsoleBankautomaat"
   ],
-  "SelectedNode": "\\SlnLes07\\SlnLes07.sln",
   "PreviewInSolutionExplorer": false
 }
