@@ -7,9 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ListBox x:Name="ltbSongs" HorizontalAlignment="Left" Height="133" Margin="26,23,0,0" VerticalAlignment="Top" Width="363">
-            <ListBoxItem x:Name="ltbTest" Content="Aaron Smith - Dancin" Selected="ltbTest_Selected"/>
+        <ListBox x:Name="ltbSongs" HorizontalAlignment="Left" Height="133" Margin="26,23,0,0" VerticalAlignment="Top" Width="384" MouseDoubleClick="ltbSongs_MouseDoubleClick">
+            <ListBoxItem x:Name="ltbTest" Content="c:/users/falko/music/Aaron Smith - Dancin.mp3"/>
+            <ListBoxItem Content="c:/users/falko/music/TLC - No Scrubs.mp3"/>
+            <ListBoxItem Content="c:/users/falko/music/JJ Grey &amp; Mofro - The Sun Is Shining Down.mp3"/>
         </ListBox>
+        <TextBox x:Name="txtArtist" HorizontalAlignment="Left" Height="23" Margin="26,161,0,0" TextWrapping="Wrap" Text="Bestandslocatie ingeven" VerticalAlignment="Top" Width="309"/>
+        <Button x:Name="btnAdd" Content="Add Song" HorizontalAlignment="Left" Margin="335,161,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="Button_Click"/>
 
     </Grid>
 </Window>

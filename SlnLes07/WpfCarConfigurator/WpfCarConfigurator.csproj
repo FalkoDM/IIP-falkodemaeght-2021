@@ -95,31 +95,18 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\alloyrim.jpg" />
-    <Resource Include="Images\bose speaker.jpg" />
-    <Resource Include="Images\car mat.jpg" />
-    <Resource Include="Images\concblue.jpg" />
-    <Resource Include="Images\concgreen.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\concconblue.jpg" />
-    <Resource Include="Images\concconred.jpg" />
-    <Resource Include="Images\concmulblue.jpg" />
-    <Resource Include="Images\concmulred.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\conccongreen.jpg" />
-    <Resource Include="Images\concmulgreen.jpg" />
-    <Resource Include="Images\concred.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\conc.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\conccon.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\concmul.jpg" />
+    <Resource Include="Images\model1_blauw.jpg" />
+    <Resource Include="Images\model1_groen.jpg" />
+    <Resource Include="Images\model1_rood.jpg" />
+    <Resource Include="Images\model2_blauw.jpg" />
+    <Resource Include="Images\model2_groen.jpg" />
+    <Resource Include="Images\model2_rood.jpg" />
+    <Resource Include="Images\model3_blauw.jpg" />
+    <Resource Include="Images\model3_groen.jpg" />
+    <Resource Include="Images\model3_rood.jpg" />
+    <Resource Include="Images\opties_audio.jpg" />
+    <Resource Include="Images\opties_matjes.jpg" />
+    <Resource Include="Images\opties_velgen.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

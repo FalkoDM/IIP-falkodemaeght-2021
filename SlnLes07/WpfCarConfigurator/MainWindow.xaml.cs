@@ -30,9 +30,9 @@ namespace WpfCarConfigurator
         private void Image_Loaded(object sender, RoutedEventArgs e)
         {
             Image img = (Image)sender;
-            imgBose.Source = new BitmapImage(new Uri("Images/bose speaker.jpg", UriKind.Relative));
-            imgMat.Source = new BitmapImage(new Uri("Images/car mat.jpg", UriKind.Relative));
-            imgVelg.Source = new BitmapImage(new Uri("Images/alloyrim.jpg", UriKind.Relative));
+            imgBose.Source = new BitmapImage(new Uri("Images/opties_audio.jpg", UriKind.Relative));
+            imgMat.Source = new BitmapImage(new Uri("Images/opties_matjes.jpg", UriKind.Relative));
+            imgVelg.Source = new BitmapImage(new Uri("Images/opties_velgen.jpg", UriKind.Relative));
         }
 
         // roep de gemaakte methodes op per event
@@ -126,35 +126,34 @@ namespace WpfCarConfigurator
 
             // switch om na te gaan welk comboboxitem /model geselecteerd is
             switch (cmbModel.SelectedIndex)
-                
             {
                 case 0:
-                    model = ""; // -> gewone versie
+                    model = "1"; // -> gewone versie
                     break;
                 case 1:
-                    model = "con"; // -> cabrio
+                    model = "2"; // -> cabrio
                     break;
                 case 2:
-                    model = "mul"; // -> mulsanne
+                    model = "3"; // -> mulsanne
                     break;
             }
 
             // if structuur om na te gaan welke kleur geselecteerd is
             if (rbnBlauw.IsChecked == true)
             {
-                kleur = "blue";
+                kleur = "blauw";
             }
             if (rbnGroen.IsChecked == true)
             {
-                kleur = "green";
+                kleur = "groen";
             }
             if (rbnRood.IsChecked == true)
             {
-                kleur = "red";
+                kleur = "rood";
             }
          
             // gebruik variabelen in de source opbouw om makkelijk te wisselen van image wanneer een selectie aangepast wordt
-            imgAuto.Source = new BitmapImage(new Uri($"Images/conc{model}{kleur}.jpg", UriKind.Relative));
+            imgAuto.Source = new BitmapImage(new Uri($"Images/model{model}_{kleur}.jpg", UriKind.Relative));
 
             // verander opacity bij het selecteren van de acccessoires
             if (chxBose.IsChecked == true)

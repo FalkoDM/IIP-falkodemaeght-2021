@@ -24,14 +24,28 @@ namespace WpfMusicPlayer
         public MainWindow()
         {
             InitializeComponent();
+
+
         }
+        WindowsMediaPlayer player = new WindowsMediaPlayer();
 
-        private void ltbTest_Selected(object sender, RoutedEventArgs e)
+
+
+        private void ltbSongs_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            WindowsMediaPlayer player = new WindowsMediaPlayer();
+            player.URL = ltbSongs.SelectedValue.ToString();
 
-            player.controls.play();
-            
+        }
+   
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Button btn = (Button)sender;
+            if (btnAdd == sender)
+            {
+                                
+            }
+     
         }
     }
 }
