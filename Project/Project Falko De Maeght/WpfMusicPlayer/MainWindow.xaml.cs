@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,23 +34,31 @@ namespace WpfMusicPlayer
 
         private void ltbSongs_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            player.URL = (ltbSongs.SelectedItem as ListBoxItem).Content.ToString();
+            var musicFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyMusic);
+            player.URL = System.IO.Path.Combine(musicFolder, $"{(ltbSongs.SelectedItem as ListBoxItem).Content}.mp3");
             player.controls.play();
         }
    
 
         private void Button_Click(object sender, RoutedEventArgs e)
-        {           
+        {
+            
             Button btn = (Button)sender;
 
             if (btnAdd == sender)
             {
                 ltbSongs.Items.Add(txtArtist.Text);
+            }
+            if (btnRemove == sender)
+            {
+                
+                ltbSongs.SelectedItems.Remove(ltbSongs.SelectedItem);
                 
             }
             if (btnStop == sender)
             {
                 player.controls.stop();
+                btnPausePlay.Content = "Play";
             }
             if (btnPausePlay == sender)
             {
@@ -69,12 +78,14 @@ namespace WpfMusicPlayer
                 if (ltbSongs.SelectedIndex != ltbSongs.Items.Count - 1 && ltbSongs.Items.Count != 0)
                 {
                     ltbSongs.SelectedIndex += 1;
-                    player.URL = (ltbSongs.SelectedItem as ListBoxItem).Content.ToString();
+                    var musicFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyMusic);
+                    player.URL = System.IO.Path.Combine(musicFolder, $"{(ltbSongs.SelectedItem as ListBoxItem).Content}.mp3");
                 }
                 else
                 {
                     ltbSongs.SelectedIndex = 0;
-                    player.URL = (ltbSongs.SelectedItem as ListBoxItem).Content.ToString();
+                    var musicFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyMusic);
+                    player.URL = System.IO.Path.Combine(musicFolder, $"{(ltbSongs.SelectedItem as ListBoxItem).Content}.mp3");
                 }
             }
             if (btnPrevious == sender)
@@ -82,14 +93,41 @@ namespace WpfMusicPlayer
                 if (ltbSongs.SelectedIndex > 0 && ltbSongs.Items.Count != 0)
                 {
                     ltbSongs.SelectedIndex -= 1;
-                    player.URL = (ltbSongs.SelectedItem as ListBoxItem).Content.ToString();
+                    var musicFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyMusic);
+                    player.URL = System.IO.Path.Combine(musicFolder, $"{(ltbSongs.SelectedItem as ListBoxItem).Content}.mp3");
                 }
                 else
                 {
                     ltbSongs.SelectedIndex = ltbSongs.Items.Count - 1;
-                    player.URL = (ltbSongs.SelectedItem as ListBoxItem).Content.ToString();
+                    var musicFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyMusic);
+                    player.URL = System.IO.Path.Combine(musicFolder, $"{(ltbSongs.SelectedItem as ListBoxItem).Content}.mp3");
                 }
             }
+            if (btnMute == sender)
+            {
+                player.settings.mute = !player.settings.mute;
+
+            }
         }
+
+        private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            Slider sld = (Slider)sender;
+
+            player.settings.volume = (int)sldVolume.Value;
+            lblVolume.Content = $"Volume: {sldVolume.Value}";
+        }
+
+        private void ltbSongs_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+           if (ltbSongs.SelectedItem != null)
+           {         
+            string[] words = (ltbSongs.SelectedItem as ListBoxItem).Content.ToString().Split('-');
+            lblArtiest.Content = $"De artiest: {words[0].ToUpper()}";
+            lblNummer.Content =  $"Het nummer: {words[1].ToUpper()}";
+           }
+            
+        }
+
     }
 }

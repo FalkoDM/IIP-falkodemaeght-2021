@@ -7,17 +7,22 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ListBox x:Name="ltbSongs" HorizontalAlignment="Left" Height="133" Margin="26,23,0,0" VerticalAlignment="Top" Width="384" MouseDoubleClick="ltbSongs_MouseDoubleClick">
-            <ListBoxItem x:Name="ltbTest" Content="c:/users/falko/music/Aaron Smith - Dancin.mp3"/>
-            <ListBoxItem Content="c:/users/falko/music/TLC - No Scrubs.mp3"/>
-            <ListBoxItem Content="c:/users/falko/music/JJ Grey &amp; Mofro - The Sun Is Shining Down.mp3"/>
+        <ListBox x:Name="ltbSongs" HorizontalAlignment="Left" Height="133" Margin="26,23,0,0" VerticalAlignment="Top" Width="384" MouseDoubleClick="ltbSongs_MouseDoubleClick" SelectionChanged="ltbSongs_SelectionChanged">
+            <ListBoxItem x:Name="ltbTest" Content="Aaron Smith - Dancin"/>
+            <ListBoxItem Content="TLC - No Scrubs"/>
+            <ListBoxItem Content="JJ Grey &amp; Mofro - The Sun Is Shining Down"/>
         </ListBox>
-        <TextBox x:Name="txtArtist" HorizontalAlignment="Left" Height="23" Margin="26,161,0,0" TextWrapping="Wrap" Text="Bestandslocatie ingeven" VerticalAlignment="Top" Width="309"/>
+        <TextBox x:Name="txtArtist" HorizontalAlignment="Left" Height="23" Margin="26,161,0,0" TextWrapping="Wrap" Text="Bestandslocatie ingeven" VerticalAlignment="Top" Width="224"/>
         <Button x:Name="btnAdd" Content="Add Song" HorizontalAlignment="Left" Margin="335,161,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="Button_Click"/>
         <Button x:Name="btnPausePlay" Content="Pause" HorizontalAlignment="Left" Margin="255,191,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
         <Button x:Name="btnStop" Content="Stop" HorizontalAlignment="Left" Margin="335,191,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
         <Button x:Name="btnNext" Content="Next" HorizontalAlignment="Left" Margin="175,191,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
         <Button x:Name="btnPrevious" Content="Previous" HorizontalAlignment="Left" Margin="95,191,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-
+        <Button x:Name="btnMute" Content="Mute" HorizontalAlignment="Left" Margin="26,191,0,0" VerticalAlignment="Top" Width="64" Click="Button_Click"/>
+        <Slider x:Name="sldVolume" HorizontalAlignment="Left" Margin="95,238,0,0" VerticalAlignment="Top" Width="315" IsSnapToTickEnabled="True" TickFrequency="1" Maximum="100" ValueChanged="Slider_ValueChanged"/>
+        <Label x:Name="lblVolume" Content="Volume" HorizontalAlignment="Left" Margin="26,230,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblArtiest" HorizontalAlignment="Left" Margin="445,23,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblNummer" HorizontalAlignment="Left" Margin="445,49,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnRemove" Content="Remove Song" HorizontalAlignment="Left" Margin="255,161,0,0" VerticalAlignment="Top" Width="75" Height="21"/>
     </Grid>
 </Window>
