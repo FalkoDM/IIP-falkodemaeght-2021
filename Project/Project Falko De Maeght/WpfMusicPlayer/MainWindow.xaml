@@ -14,6 +14,10 @@
         </ListBox>
         <TextBox x:Name="txtArtist" HorizontalAlignment="Left" Height="23" Margin="26,161,0,0" TextWrapping="Wrap" Text="Bestandslocatie ingeven" VerticalAlignment="Top" Width="309"/>
         <Button x:Name="btnAdd" Content="Add Song" HorizontalAlignment="Left" Margin="335,161,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="Button_Click"/>
+        <Button x:Name="btnPausePlay" Content="Pause" HorizontalAlignment="Left" Margin="255,191,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button x:Name="btnStop" Content="Stop" HorizontalAlignment="Left" Margin="335,191,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button x:Name="btnNext" Content="Next" HorizontalAlignment="Left" Margin="175,191,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button x:Name="btnPrevious" Content="Previous" HorizontalAlignment="Left" Margin="95,191,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
 
     </Grid>
 </Window>

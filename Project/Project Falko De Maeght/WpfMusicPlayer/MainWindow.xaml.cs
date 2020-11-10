@@ -28,24 +28,68 @@ namespace WpfMusicPlayer
 
         }
         WindowsMediaPlayer player = new WindowsMediaPlayer();
-
+        
 
 
         private void ltbSongs_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            player.URL = ltbSongs.SelectedValue.ToString();
-
+            player.URL = (ltbSongs.SelectedItem as ListBoxItem).Content.ToString();
+            player.controls.play();
         }
    
 
         private void Button_Click(object sender, RoutedEventArgs e)
-        {
+        {           
             Button btn = (Button)sender;
+
             if (btnAdd == sender)
             {
-                                
+                ltbSongs.Items.Add(txtArtist.Text);
+                
             }
-     
+            if (btnStop == sender)
+            {
+                player.controls.stop();
+            }
+            if (btnPausePlay == sender)
+            {
+                if (player.playState == WMPPlayState.wmppsPlaying)
+                {
+                    player.controls.pause();
+                    btnPausePlay.Content = "Play";
+                }
+                else
+                {
+                    player.controls.play();
+                    btnPausePlay.Content = "Pause";
+                }
+            }
+            if (btnNext == sender)
+            {
+                if (ltbSongs.SelectedIndex != ltbSongs.Items.Count - 1 && ltbSongs.Items.Count != 0)
+                {
+                    ltbSongs.SelectedIndex += 1;
+                    player.URL = (ltbSongs.SelectedItem as ListBoxItem).Content.ToString();
+                }
+                else
+                {
+                    ltbSongs.SelectedIndex = 0;
+                    player.URL = (ltbSongs.SelectedItem as ListBoxItem).Content.ToString();
+                }
+            }
+            if (btnPrevious == sender)
+            {
+                if (ltbSongs.SelectedIndex > 0 && ltbSongs.Items.Count != 0)
+                {
+                    ltbSongs.SelectedIndex -= 1;
+                    player.URL = (ltbSongs.SelectedItem as ListBoxItem).Content.ToString();
+                }
+                else
+                {
+                    ltbSongs.SelectedIndex = ltbSongs.Items.Count - 1;
+                    player.URL = (ltbSongs.SelectedItem as ListBoxItem).Content.ToString();
+                }
+            }
         }
     }
 }
