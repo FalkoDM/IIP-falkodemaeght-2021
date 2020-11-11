@@ -20,8 +20,8 @@ namespace ConsoleScores
             // variabele max en minValue om de kleinste en grootste waarde te bepalen in de array, alsook hun index
             int maxValue = scoreTest.Max();
             int minValue = scoreTest.Min();
-            int indexMax = scoreTest.ToList().IndexOf(maxValue);
-            int indexMin = scoreTest.ToList().IndexOf(minValue);
+            int indexGrootste = scoreTest.ToList().IndexOf(maxValue);
+            int indexKleinste = scoreTest.ToList().IndexOf(minValue);
 
             // ga door heel de array en maak de som, voeg ook een komma toe tussen verschillende waardes of het woordje "en" bij voorlaatste waarde (length -2)
             for (int i = 0; i < scoreTest.Length; i++)
@@ -42,8 +42,8 @@ namespace ConsoleScores
             Console.WriteLine($"Scores test: {weergaveArray}");
             Console.WriteLine();
             Console.WriteLine($"De gemiddelde score van de test was: {gemiddelde}");
-            Console.WriteLine($"De slechtste score op de test was: {minValue} (positie {indexMin + 1})"); // +1 want index begint op 0
-            Console.WriteLine($"De beste score op de test was: {maxValue} (positie {indexMax + 1})"); // +1 want index begint op 0
+            Console.WriteLine($"De slechtste score op de test was: {minValue} (positie {indexKleinste + 1})"); // +1 want index begint op 0
+            Console.WriteLine($"De beste score op de test was: {maxValue} (positie {indexGrootste + 1})"); // +1 want index begint op 0
             Console.ReadKey();
         }
     }
