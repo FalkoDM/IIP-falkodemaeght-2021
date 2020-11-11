@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Automation;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
@@ -59,14 +60,23 @@ namespace WpfKwistet
                 txtName.Text = string.Empty;               
             }
             // als de listbox items bevat maak het mogelijk om de lijst in een keer leeg te maken
-            if (btnClear == sender && ltbStorage.Items != null)
+            if (btnClear == sender)
             {
                 ltbStorage.Items.Clear();
             }
         }
+        // methode aangemaakt voor de buttonweergave te regelen en opgeroepen in de changed events
         private void txtName_TextChanged(object sender, TextChangedEventArgs e)
         {
-            // als textbox een string bevat, activeer dan de ADD button zoniet, deactiveer hem dan opnieuw
+            ButtonCheck();
+        }
+        private void ltbStorage_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ButtonCheck();
+        }
+        private void ButtonCheck()
+        {
+            // als teksbox een string bevat activeer de add knop, zoniet disable opnieuw
             if (txtName.Text != string.Empty)
             {
                 btnAdd.IsEnabled = true;
@@ -75,18 +85,6 @@ namespace WpfKwistet
             {
                 btnAdd.IsEnabled = false;
             }
-            // als er een item is geselecteerd en het textvak bevat een string, activeer dan den MOD knop. Zoniet deactiveer hem dan opnieuw
-            if (ltbStorage.SelectedItem != null && txtName.Text != string.Empty)
-            {
-                btnMod.IsEnabled = true;
-            }
-            else
-            {
-                btnMod.IsEnabled = false;
-            }
-        }
-        private void ltbStorage_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
             // als er een item geselecteerd is activeer dan de delete knop. Zoniet, deactiveer hem opnieuw
             if (ltbStorage.SelectedItem != null)
             {

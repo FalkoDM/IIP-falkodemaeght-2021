@@ -24,60 +24,66 @@ namespace WpfTodo
         {
             InitializeComponent();
             
-            // buttons standaar disabled
+            // buttons standaard disabled
             btnAdd.IsEnabled = false;
             btnDelete.IsEnabled = false;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            // breng alle buttons onder in een event
             Button btn = (Button)sender;
+
+            // variabele task om selected listboxitem in op te slaan
             ListBoxItem task = (ListBoxItem)ltbToDo.SelectedItem;
+
+            // variabele item on nieuw item toe te voegen aan listbox
             ListBoxItem item = new ListBoxItem();
             item.Content = txtTaak.Text;
 
-
+            // als de textbox een string bevat en combobox hoge prioriteit is geselecteerd geef dan rode kleur mee en voeg item toe
             if (btnAdd == sender && txtTaak.Text != string.Empty && cmbHoog.IsSelected)
             {
                 item.Foreground = new SolidColorBrush(Color.FromRgb(150, 0, 0));
                 ltbToDo.Items.Add(item);
                 txtTaak.Text = string.Empty;
             }
+            // als de textbox een string bevat en combobox medium prio is geselecteerd geef dan oranje kleur mee en voeg item toe
             if (btnAdd == sender && txtTaak.Text != string.Empty && cmbMedium.IsSelected)
             {
                 item.Foreground = new SolidColorBrush(Color.FromRgb(255, 130, 0));
                 ltbToDo.Items.Add(item);
                 txtTaak.Text = string.Empty;
             }
+            // als de textbox een string bevat en combobox lage prio is geselecteerd geef dan groene kleuer mee en voeg item toe
             if (btnAdd == sender && txtTaak.Text != string.Empty && cmbLaag.IsSelected)
             {
                 item.Foreground = new SolidColorBrush(Color.FromRgb(0, 195, 0));
                 ltbToDo.Items.Add(item);
                 txtTaak.Text = string.Empty;
             }
-
+            // als de listbox een item bevat verwijder dan het geselecteerde item
             if (btnDelete == sender && task != null)
             {
                 ltbToDo.Items.Remove(task);
             }
-
         }
+        // een methode buttoncheck aangemaakt en opgeroepen in de verschillende changed events
         private void txtTaak_TextChanged(object sender, TextChangedEventArgs e)
         {
             ButtonCheck();
         }
-
         private void ltbToDo_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ButtonCheck();
         }
-
         private void cmbPrio_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ButtonCheck();
         }
         private void ButtonCheck()
         {
+            // is de voorwaarde voldaan activeer dan de toevoegen knop en anders disable hem opnieuw
             if (cmbHoog.IsSelected && txtTaak.Text != string.Empty || cmbMedium.IsSelected && txtTaak.Text != string.Empty || cmbLaag.IsSelected && txtTaak.Text != string.Empty)
             {
                 btnAdd.IsEnabled = true;
@@ -86,6 +92,7 @@ namespace WpfTodo
             {
                 btnAdd.IsEnabled = false;
             }
+            // als er een item geselecteerd is activeer dan de verwijder knop en anders disable hem opnieuw
             if (ltbToDo.SelectedItem != null)
             {
                 btnDelete.IsEnabled = true;
