@@ -23,10 +23,15 @@ namespace WpfKwistet
         public MainWindow()
         {
             InitializeComponent();
+
+            // disable alle knoppen standaard
+            btnAdd.IsEnabled = false;
+            btnDelete.IsEnabled = false;
+            btnMod.IsEnabled = false;
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            // button sender breng alle buttons onder in een event
+            // button sender brengt alle buttons onder in een event
             Button btn = (Button)sender;
 
             // variabele kwisgroep die het geselecteerde item opslaat
@@ -39,20 +44,66 @@ namespace WpfKwistet
            // als het textvak een string bevat voeg ze dan toe aan de listbox
             if (btnAdd == sender && txtName.Text != string.Empty)
             {
-                 ltbStorage.Items.Add(item);
-                 txtName.Text = string.Empty;              
+                ltbStorage.Items.Add(item);
+                txtName.Text = string.Empty;           
             }
             // als er een item geselecteerd is, verwijder dan dat item
             if (btnDelete == sender && kwisgroep != null)
             {
-                 ltbStorage.Items.Remove(kwisgroep);
-                
+                 ltbStorage.Items.Remove(kwisgroep);                
             }
             // als er een item geselecteerd is en het textvak is niet leeg, verander dan de content van het item
             if (btnMod == sender && kwisgroep != null && txtName.Text != string.Empty)
             {
-                 ltbStorage.Items[ltbStorage.SelectedIndex] = item;
-                 txtName.Text = string.Empty;               
+                ltbStorage.Items[ltbStorage.SelectedIndex] = item;
+                txtName.Text = string.Empty;               
+            }
+            // als de listbox items bevat maak het mogelijk om de lijst in een keer leeg te maken
+            if (btnClear == sender && ltbStorage.Items != null)
+            {
+                ltbStorage.Items.Clear();
+            }
+        }
+        private void txtName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            // als textbox een string bevat, activeer dan de ADD button zoniet, deactiveer hem dan opnieuw
+            if (txtName.Text != string.Empty)
+            {
+                btnAdd.IsEnabled = true;
+            }
+            else
+            {
+                btnAdd.IsEnabled = false;
+            }
+            // als er een item is geselecteerd en het textvak bevat een string, activeer dan den MOD knop. Zoniet deactiveer hem dan opnieuw
+            if (ltbStorage.SelectedItem != null && txtName.Text != string.Empty)
+            {
+                btnMod.IsEnabled = true;
+            }
+            else
+            {
+                btnMod.IsEnabled = false;
+            }
+        }
+        private void ltbStorage_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            // als er een item geselecteerd is activeer dan de delete knop. Zoniet, deactiveer hem opnieuw
+            if (ltbStorage.SelectedItem != null)
+            {
+                btnDelete.IsEnabled = true;
+            }
+            else
+            {
+                btnDelete.IsEnabled = false;
+            }
+            // als er een item is geselecteerd en het textvak bevat een string, activeer dan den MOD knop. Zoniet deactiveer hem dan opnieuw
+            if (ltbStorage.SelectedItem != null && txtName.Text != string.Empty)
+            {
+                btnMod.IsEnabled = true;
+            }
+            else
+            {
+                btnMod.IsEnabled = false;
             }
         }
     }
