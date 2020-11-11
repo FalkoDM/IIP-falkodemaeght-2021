@@ -36,7 +36,7 @@ namespace ConsolePaswoordenSorteren
                 volgNummer++;
                 if (item.Contains("@") || item.Length < 9 || item.Contains("paswoord"))
                 {
-                     nietOk += item + ", ";
+                    nietOk += item + ", ";
                 }
                 else
                 {
