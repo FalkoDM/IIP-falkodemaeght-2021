@@ -11,17 +11,17 @@
         <Label Content="KLEUR" HorizontalAlignment="Left" Margin="62,92,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
         <Label Content="ACCESSOIRES" HorizontalAlignment="Left" Margin="62,191,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
         <Label Content="PRIJS" HorizontalAlignment="Left" Margin="62,347,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
-        <ComboBox x:Name="cmbModel" HorizontalAlignment="Left" Margin="228,55,0,0" VerticalAlignment="Top" Width="204" Height="32" SelectionChanged="cmbModel_SelectionChanged">
+        <ComboBox x:Name="cmbModel" HorizontalAlignment="Left" Margin="228,55,0,0" VerticalAlignment="Top" Width="204" Height="32" SelectionChanged="ConfiguratieGewijzigd">
             <ComboBoxItem Content="Continental v8 (85000 euro)" Name="cmbContinental" Tag="a" HorizontalAlignment="Left" Width="194" FontSize="14"/>
             <ComboBoxItem Content="Convertible (72000 euro)" Name="cmbConvertible" Tag="b" FontSize="14" Margin="0,0,37.2,0"/>
             <ComboBoxItem Content="Mulsanne (65300 euro)" Name="cmbMulsanne" Tag="c" HorizontalAlignment="Left" Width="189" FontSize="14"/>
         </ComboBox>
-        <RadioButton x:Name="rbnBlauw" Content="Blauw" Tag="1" HorizontalAlignment="Left" Margin="228,100,0,0" VerticalAlignment="Top" FontSize="14" Checked="RadioButton_Checked"/>
-        <RadioButton x:Name="rbnGroen" Content="Groen (+250 euro)" Tag="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="228,123,0,0" FontSize="14" Checked="RadioButton_Checked"/>
-        <RadioButton x:Name="rbnRood" Content="Rood (+700euro)" Tag="3" HorizontalAlignment="Left" Margin="228,146,0,0" VerticalAlignment="Top" FontSize="14" Checked="RadioButton_Checked"/>
-        <CheckBox x:Name="chxBose" Content="Bose auto speakers (+1250 euro" HorizontalAlignment="Left" Margin="228,199,0,0" VerticalAlignment="Top" FontSize="14" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked"/>
-        <CheckBox x:Name="chxMat" Content="Deluxe matjes (+450 euro)" HorizontalAlignment="Left" Margin="228,222,0,0" VerticalAlignment="Top" FontSize="14" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked"/>
-        <CheckBox x:Name="chxVelgen" Content="Alluminium velgen (+300 euro)" HorizontalAlignment="Left" Margin="228,245,0,0" VerticalAlignment="Top" FontSize="14" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked"/>
+        <RadioButton x:Name="rbnBlauw" Content="Blauw" Tag="1" HorizontalAlignment="Left" Margin="228,100,0,0" VerticalAlignment="Top" FontSize="14" Checked="ConfiguratieGewijzigd" Unchecked="ConfiguratieGewijzigd"/>
+        <RadioButton x:Name="rbnGroen" Content="Groen (+250 euro)" Tag="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="228,123,0,0" FontSize="14" Checked="ConfiguratieGewijzigd" Unchecked="ConfiguratieGewijzigd"/>
+        <RadioButton x:Name="rbnRood" Content="Rood (+700euro)" Tag="3" HorizontalAlignment="Left" Margin="228,146,0,0" VerticalAlignment="Top" FontSize="14" Checked="ConfiguratieGewijzigd" Unchecked="ConfiguratieGewijzigd"/>
+        <CheckBox x:Name="chxBose" Content="Bose auto speakers (+1250 euro" HorizontalAlignment="Left" Margin="228,199,0,0" VerticalAlignment="Top" FontSize="14" Checked="ConfiguratieGewijzigd" Unchecked="ConfiguratieGewijzigd"/>
+        <CheckBox x:Name="chxMat" Content="Deluxe matjes (+450 euro)" HorizontalAlignment="Left" Margin="228,222,0,0" VerticalAlignment="Top" FontSize="14" Checked="ConfiguratieGewijzigd" Unchecked="ConfiguratieGewijzigd"/>
+        <CheckBox x:Name="chxVelgen" Content="Alluminium velgen (+300 euro)" HorizontalAlignment="Left" Margin="228,245,0,0" VerticalAlignment="Top" FontSize="14" Checked="ConfiguratieGewijzigd" Unchecked="ConfiguratieGewijzigd"/>
         <Label x:Name="lblPrijs" Content="" HorizontalAlignment="Left" Margin="228,349,0,0" VerticalAlignment="Top" FontSize="14"/>
         <Image x:Name="imgAuto" HorizontalAlignment="Left" Height="168" Margin="460,55,0,0" VerticalAlignment="Top" Width="314"/>
         <Image x:Name="imgBose" HorizontalAlignment="Left" Height="62" Margin="312,284,0,0" VerticalAlignment="Top" Width="120" Loaded="Image_Loaded" Opacity="0.2"/>

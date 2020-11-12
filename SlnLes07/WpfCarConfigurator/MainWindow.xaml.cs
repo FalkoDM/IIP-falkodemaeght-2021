@@ -35,30 +35,13 @@ namespace WpfCarConfigurator
             imgVelg.Source = new BitmapImage(new Uri("Images/opties_velgen.jpg", UriKind.Relative));
         }
 
-        // roep de gemaakte methodes op per event
-        private void cmbModel_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        // roep de gemaakte methodes op 
+        private void ConfiguratieGewijzigd(object sender, RoutedEventArgs e)
         {
             UpdateUI();
             lblPrijs.Content = $"{BerekenPrijs()} euro";
         }
-        private void RadioButton_Checked(object sender, RoutedEventArgs e)
-        {
-            RadioButton rbn = (RadioButton)sender;
-            UpdateUI();
-            lblPrijs.Content = $"{BerekenPrijs()} euro";
-        }
-        private void CheckBox_Checked(object sender, RoutedEventArgs e)
-        {
-            CheckBox chx = (CheckBox)sender;
-            UpdateUI();
-            lblPrijs.Content = $"{BerekenPrijs()} euro";
-        }
-        private void CheckBox_Unchecked(object sender, RoutedEventArgs e)
-        {
-            CheckBox chx = (CheckBox)sender;
-            UpdateUI();
-            lblPrijs.Content = $"{BerekenPrijs()} euro";
-        }
+        
         // methode prijs berekening
         private int BerekenPrijs()
         {
@@ -180,6 +163,6 @@ namespace WpfCarConfigurator
             {
                 imgVelg.Opacity = 0.2;
             }
-        }     
+        }
     }
 }

@@ -18,24 +18,35 @@ namespace ConsoleSchrikkeljaar
             {
                 Console.Write("Geef een jaartal: ");
                 int.TryParse(Console.ReadLine(), out jaartal);
-                BerekenSchrikkeljaar(jaartal); // <-- roep de methode op na inlezen getal
+
+                var schrikkeljaar = BerekenSchrikkeljaar(jaartal); // <-- roep de methode op na inlezen getal
+                if (schrikkeljaar == false)
+                {
+                    Console.WriteLine($"Het jaar {jaartal} is geen schrikkeljaar");  
+                }
+                else
+                {
+                    Console.WriteLine($"Het jaar {jaartal} is een schrikkeljaar");
+                }
             }
             while (jaartal > 0);
             Console.ReadKey();
         }
 
         // methode om na te gaan of het een schrikkeljaar is of niet
-        static private void BerekenSchrikkeljaar(int jaartal)
+        static private bool BerekenSchrikkeljaar(int jaartal)
         {
+            bool schrikkeljaar;
             // als jaartal deelbaar is door vier en niet door 100 maar wel door 400
             if (jaartal % 4 == 0 && jaartal % 100 != 0 || jaartal % 400 == 0)
             {
-                Console.WriteLine($"Het jaar {jaartal} is een schrikkeljaar.");
+                schrikkeljaar = true;
             }
             else
             {
-                Console.WriteLine($"Het jaar {jaartal} is geen schrikkeljaar.");
+                schrikkeljaar = false;
             }
+            return schrikkeljaar;
         }
     }
 }
