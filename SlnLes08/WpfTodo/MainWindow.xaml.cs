@@ -30,9 +30,6 @@ namespace WpfTodo
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            // breng alle buttons onder in een event
-            Button btn = (Button)sender;
-
             // variabele task om selected listboxitem in op te slaan
             ListBoxItem task = (ListBoxItem)ltbToDo.SelectedItem;
 

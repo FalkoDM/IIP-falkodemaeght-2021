@@ -174,15 +174,16 @@ namespace ConsoleMusicPlayer
             Console.WriteLine("6. Afsluiten");
             Console.WriteLine("");
             Console.Write("je keuze: ");
-            Console.WriteLine();
 
             // als pauze of mute actief zijn geef dat dan ook weer in de console
             if (player.playState == WMPPlayState.wmppsPaused)
             {
+                Console.WriteLine();
                 Console.WriteLine("PAUSED");
             }
             if (player.settings.mute == true)
             {
+                Console.WriteLine();
                 Console.WriteLine("MUTED");
             }
         }
@@ -357,7 +358,6 @@ namespace ConsoleMusicPlayer
                 // stel het eerste nummer gelijk aan de variabele
                 songs[nummer1] = temporary;
             }
-
         }
 
 

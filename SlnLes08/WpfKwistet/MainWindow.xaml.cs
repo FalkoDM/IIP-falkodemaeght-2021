@@ -32,9 +32,6 @@ namespace WpfKwistet
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            // button sender brengt alle buttons onder in een event
-            Button btn = (Button)sender;
-
             // variabele kwisgroep die het geselecteerde item opslaat
             ListBoxItem kwisgroep = (ListBoxItem)ltbStorage.SelectedItem;
 

@@ -29,7 +29,6 @@ namespace WpfCarConfigurator
         // laad de images voor de accessoires op
         private void Image_Loaded(object sender, RoutedEventArgs e)
         {
-            Image img = (Image)sender;
             imgBose.Source = new BitmapImage(new Uri("Images/opties_audio.jpg", UriKind.Relative));
             imgMat.Source = new BitmapImage(new Uri("Images/opties_matjes.jpg", UriKind.Relative));
             imgVelg.Source = new BitmapImage(new Uri("Images/opties_velgen.jpg", UriKind.Relative));

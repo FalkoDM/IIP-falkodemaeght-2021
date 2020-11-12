@@ -30,30 +30,51 @@ namespace WpfMusicPlayer
         }
         WindowsMediaPlayer player = new WindowsMediaPlayer();
         
+        private void PlaySong()
+        {
+            ListBoxItem selectedSong = (ListBoxItem)ltbSongs.SelectedItem;
 
+            var musicFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyMusic);
+            player.URL = System.IO.Path.Combine(musicFolder, $"{selectedSong.Content}.mp3");
+            player.controls.play();
+
+        }
 
         private void ltbSongs_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            var musicFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyMusic);
-            player.URL = System.IO.Path.Combine(musicFolder, $"{(ltbSongs.SelectedItem as ListBoxItem).Content}.mp3");
-            player.controls.play();
+            ListBoxItem selectedSong = (ListBoxItem)ltbSongs.SelectedItem;
+
+            PlaySong();
+            if (selectedSong.IsSelected)
+            {
+                string[] words = selectedSong.Content.ToString().Split('-');
+                lblArtiest.Content = $"Artiest: {words[0]}";
+                lblNummer.Content = $"Nummer: {words[1]}";
+            }
+
+
         }
-   
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             
-            Button btn = (Button)sender;
+            ListBoxItem selectedSong = (ListBoxItem)ltbSongs.SelectedItem;
+            ListBoxItem newSong = new ListBoxItem();
+
+            newSong.Content = $"{txtArtist.Text} - {txtNummer.Text}";
+
 
             if (btnAdd == sender)
             {
-                ltbSongs.Items.Add(txtArtist.Text);
+                ltbSongs.Items.Add(newSong);
+                txtArtist.Text = string.Empty;
+                txtNummer.Text = string.Empty;
             }
-            if (btnRemove == sender)
+            if (btnRemove == sender && selectedSong != null)
             {
-                
-                ltbSongs.SelectedItems.Remove(ltbSongs.SelectedItem);
-                
+                lblArtiest.Content = string.Empty;
+                lblNummer.Content = string.Empty;
+                ltbSongs.Items.Remove(selectedSong);                
             }
             if (btnStop == sender)
             {
@@ -78,14 +99,12 @@ namespace WpfMusicPlayer
                 if (ltbSongs.SelectedIndex != ltbSongs.Items.Count - 1 && ltbSongs.Items.Count != 0)
                 {
                     ltbSongs.SelectedIndex += 1;
-                    var musicFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyMusic);
-                    player.URL = System.IO.Path.Combine(musicFolder, $"{(ltbSongs.SelectedItem as ListBoxItem).Content}.mp3");
+                    PlaySong();
                 }
                 else
                 {
                     ltbSongs.SelectedIndex = 0;
-                    var musicFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyMusic);
-                    player.URL = System.IO.Path.Combine(musicFolder, $"{(ltbSongs.SelectedItem as ListBoxItem).Content}.mp3");
+                    PlaySong();
                 }
             }
             if (btnPrevious == sender)
@@ -93,14 +112,12 @@ namespace WpfMusicPlayer
                 if (ltbSongs.SelectedIndex > 0 && ltbSongs.Items.Count != 0)
                 {
                     ltbSongs.SelectedIndex -= 1;
-                    var musicFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyMusic);
-                    player.URL = System.IO.Path.Combine(musicFolder, $"{(ltbSongs.SelectedItem as ListBoxItem).Content}.mp3");
+                    PlaySong();
                 }
                 else
                 {
                     ltbSongs.SelectedIndex = ltbSongs.Items.Count - 1;
-                    var musicFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyMusic);
-                    player.URL = System.IO.Path.Combine(musicFolder, $"{(ltbSongs.SelectedItem as ListBoxItem).Content}.mp3");
+                    PlaySong();
                 }
             }
             if (btnMute == sender)
@@ -112,21 +129,13 @@ namespace WpfMusicPlayer
 
         private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            Slider sld = (Slider)sender;
 
             player.settings.volume = (int)sldVolume.Value;
             lblVolume.Content = $"Volume: {sldVolume.Value}";
         }
-
-        private void ltbSongs_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void UpdateUI()
         {
-           if (ltbSongs.SelectedItem != null)
-           {         
-            string[] words = (ltbSongs.SelectedItem as ListBoxItem).Content.ToString().Split('-');
-            lblArtiest.Content = $"De artiest: {words[0].ToUpper()}";
-            lblNummer.Content =  $"Het nummer: {words[1].ToUpper()}";
-           }
-            
+
         }
 
     }
