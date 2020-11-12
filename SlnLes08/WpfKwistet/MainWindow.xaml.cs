@@ -65,15 +65,12 @@ namespace WpfKwistet
                 ltbStorage.Items.Clear();
             }
         }
-        // methode aangemaakt voor de buttonweergave te regelen en opgeroepen in de changed events
-        private void txtName_TextChanged(object sender, TextChangedEventArgs e)
+        // methode aangemaakt voor de changed events aan te spreken
+        private void ButtonControl(object sender, RoutedEventArgs e)
         {
             ButtonCheck();
         }
-        private void ltbStorage_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            ButtonCheck();
-        }
+        // methode aangemaakt voor de buttonweergave te regelen
         private void ButtonCheck()
         {
             // als teksbox een string bevat activeer de add knop, zoniet disable opnieuw

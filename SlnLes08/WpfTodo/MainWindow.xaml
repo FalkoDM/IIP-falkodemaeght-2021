@@ -9,13 +9,13 @@
     <Grid>
         <Label Content="Taak:" HorizontalAlignment="Left" Margin="105,83,0,0" VerticalAlignment="Top" FontSize="14"/>
         <Label Content="Prioriteit:" HorizontalAlignment="Left" Margin="105,117,0,0" VerticalAlignment="Top" FontSize="14"/>
-        <TextBox x:Name="txtTaak" HorizontalAlignment="Left" Height="29" Margin="204,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="186" FontSize="14" TextChanged="txtTaak_TextChanged"/>
-        <ComboBox x:Name="cmbPrio" HorizontalAlignment="Left" Margin="204,117,0,0" VerticalAlignment="Top" Width="186" Height="28" FontSize="14" SelectionChanged="cmbPrio_SelectionChanged">
+        <TextBox x:Name="txtTaak" HorizontalAlignment="Left" Height="29" Margin="204,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="186" FontSize="14" TextChanged="ButtonControl"/>
+        <ComboBox x:Name="cmbPrio" HorizontalAlignment="Left" Margin="204,117,0,0" VerticalAlignment="Top" Width="186" Height="28" FontSize="14" SelectionChanged="ButtonControl">
             <ComboBoxItem x:Name="cmbHoog" Content="Hoog" HorizontalAlignment="Left" Width="184" FontSize="14"/>
             <ComboBoxItem x:Name="cmbMedium" Content="Medium" HorizontalAlignment="Left" Width="184" FontSize="14"/>
             <ComboBoxItem x:Name="cmbLaag" Content="Laag" HorizontalAlignment="Left" Width="184" FontSize="14"/>
         </ComboBox>
-        <ListBox x:Name="ltbToDo" HorizontalAlignment="Left" Height="221" Margin="438,83,0,0" VerticalAlignment="Top" Width="228" FontWeight="Bold" SelectionChanged="ltbToDo_SelectionChanged"/>
+        <ListBox x:Name="ltbToDo" HorizontalAlignment="Left" Height="221" Margin="438,83,0,0" VerticalAlignment="Top" Width="228" FontWeight="Bold" SelectionChanged="ButtonControl"/>
         <Button x:Name="btnAdd" Content="TOEVOEGEN" HorizontalAlignment="Left" Margin="263,168,0,0" VerticalAlignment="Top" Width="127" Click="Button_Click" Height="32" FontSize="14"/>
         <Button x:Name="btnDelete" Content="VERWIJDEREN" HorizontalAlignment="Left" Margin="539,326,0,0" VerticalAlignment="Top" Width="127" Click="Button_Click" FontSize="14" Height="32"/>
 

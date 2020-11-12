@@ -17,7 +17,7 @@ namespace ConsoleScores__vervolg_
             int[] scores = new int[index];
 
             // roep methode op om de array / scores af te beelden
-            PrintScores(scores, index);
+            Console.WriteLine($"Scores test: {PrintScores(scores, index)}");
             Console.WriteLine();
 
             // schrijf het gemiddelde uit mbv de methode BepaalGemiddelde()
@@ -32,7 +32,7 @@ namespace ConsoleScores__vervolg_
             Console.WriteLine($"De slechtste score op de test was: {ZoekKleinste(scores)} (positie {indexKleinste + 1})"); // +1 omdat index van 0 begint
             Console.ReadKey();
         }
-        static private void PrintScores(int[] scores, int index)
+        static private string PrintScores(int[] scores, int index)
         {
             // random klasse
             Random rnd = new Random();
@@ -60,8 +60,8 @@ namespace ConsoleScores__vervolg_
                     weergaveArray += " en ";
                 }
        
-            } // druk de array af in de console
-            Console.WriteLine($"Scores test: {weergaveArray}");
+            }
+            return weergaveArray;
         }
         static private double BepaalGemiddelde(int[] scores, int index)
         {

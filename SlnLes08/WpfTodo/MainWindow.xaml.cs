@@ -28,7 +28,6 @@ namespace WpfTodo
             btnAdd.IsEnabled = false;
             btnDelete.IsEnabled = false;
         }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             // breng alle buttons onder in een event
@@ -68,19 +67,12 @@ namespace WpfTodo
                 ltbToDo.Items.Remove(task);
             }
         }
-        // een methode buttoncheck aangemaakt en opgeroepen in de verschillende changed events
-        private void txtTaak_TextChanged(object sender, TextChangedEventArgs e)
+        // methode buttoncontrol om de verschillende events aan te spreken
+        private void ButtonControl(object sender, RoutedEventArgs e)
         {
             ButtonCheck();
         }
-        private void ltbToDo_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            ButtonCheck();
-        }
-        private void cmbPrio_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            ButtonCheck();
-        }
+        // een methode buttoncheck aangemaakt om de knoppen te enabeen en te disabelen afhankelijk van de voorwaarden
         private void ButtonCheck()
         {
             // is de voorwaarde voldaan activeer dan de toevoegen knop en anders disable hem opnieuw
