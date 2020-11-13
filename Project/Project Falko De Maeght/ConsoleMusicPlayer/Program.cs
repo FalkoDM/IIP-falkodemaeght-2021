@@ -62,9 +62,12 @@ namespace ConsoleMusicPlayer
                                 PrintPlaylist(songs);
                                 Console.Write("geef een liedje om af te spelen: ");
                                 index = Convert.ToInt32(Console.ReadLine());
-                                index = ControleerIndex(index, maxIndex); // vraagt nieuwe waarde na te hoge of te lage ingave
+                                index = ControleerIndex(index, maxIndex, songs); // vraagt nieuwe waarde na te hoge of te lage ingave
+                                if (songs.Count != 0)// vermijd crash bij lege list,
+                                {
                                 newSong = songs[index];
                                 GetSong(newSong, player);
+                                }
                                 break;
                             case "2":
                                 newSong = PlayNextSong(songs, newSong, maxIndex);
@@ -92,11 +95,12 @@ namespace ConsoleMusicPlayer
                                 SwapNummers(songs, maxIndex, nummer1, nummer2);
                                 break;
                             case "7":
+                                Console.WriteLine();
                                 Console.WriteLine("Geef bestandsnaam van de muzieklijst: ");
                                 bestand = Console.ReadLine();
                                 ImportMedia(bestand, songs);
 
-                                // maxindex opnieuw berekenen van de gehele lijst
+                                // maxindex opnieuw berekenen van de gehele lijst na import nieuwe lijst
                                 maxIndex = songs.Count()-1;
                                 break;
                             case "8":
@@ -110,7 +114,7 @@ namespace ConsoleMusicPlayer
                             case "9":
                                 break;
                             default:
-                                Console.WriteLine("Dit is geen geldige keuze");
+                                Console.WriteLine("Ongeldige keuze! Druk enter om terug te keren naar het vorige menu");
                                 break;
                         }
                         break;
@@ -241,13 +245,13 @@ namespace ConsoleMusicPlayer
         }
 
         // methode om de playlist af te beelden
-        static private void PrintPlaylist(List<string>song)
+        static private void PrintPlaylist(List<string>songs)
         {
             Console.WriteLine();
             Console.WriteLine();
-            foreach (string nummer in song)
+            foreach (string nummer in songs)
             {
-                Console.WriteLine($"{song.IndexOf(nummer)}: {nummer}");
+                Console.WriteLine($"{songs.IndexOf(nummer)}: {nummer}");
             }
             Console.WriteLine();
         }
@@ -270,14 +274,21 @@ namespace ConsoleMusicPlayer
         }
 
         // methode om een getal te verkrijgen tussen 0 en de maxIndex, zolang de gebruiker een foutief getal ingeeft blijf herhalen
-        static private int ControleerIndex(int index, int maxIndex)
+        static private int ControleerIndex(int index, int maxIndex, List<string>songs)
         {
             while (index > maxIndex || index < 0)
             {
+                if (songs.Count != 0)// als lijst items bevat blijf dan vragen om een correct nummer in te geven
+                {
                 Console.WriteLine("");
                 Console.WriteLine("Geen geldige keuze! ");
                 Console.Write("geef een nieuwe waarde: ");
                 index = Convert.ToInt32(Console.ReadLine());
+                }
+                else
+                {
+                    break; // anders breek je uit de loop https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/break
+                }
             }
             return index;
         }
@@ -408,7 +419,6 @@ namespace ConsoleMusicPlayer
                     }
                 }
             }
-
         }
 
 
@@ -430,15 +440,14 @@ namespace ConsoleMusicPlayer
         static private void PauzePlay(WindowsMediaPlayer player)
         {
             // als de status van de player "playing" is, zet hem dan op pauze
-            if (player.playState == WMPPlayState.wmppsPlaying)
+            if (player.playState == WMPPlayState.wmppsPlaying) // https://docs.microsoft.com/en-us/windows/win32/wmp/player-playstate
             {
                 player.controls.pause();
             }
             // anders terug op play
             else
             {
-                player.controls.play();
-                
+                player.controls.play();              
             }
         }
     }
