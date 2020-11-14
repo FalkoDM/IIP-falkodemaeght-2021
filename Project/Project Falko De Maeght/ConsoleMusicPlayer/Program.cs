@@ -101,7 +101,7 @@ namespace ConsoleMusicPlayer
                                 ImportMedia(bestand, songs);
 
                                 // maxindex opnieuw berekenen van de gehele lijst na import nieuwe lijst
-                                maxIndex = songs.Count()-1;
+                                maxIndex = GetMaxIndex(songs);
                                 break;
                             case "8":
                                 Console.WriteLine();
