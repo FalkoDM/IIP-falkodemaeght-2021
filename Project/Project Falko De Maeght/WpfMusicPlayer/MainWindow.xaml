@@ -6,30 +6,38 @@
         xmlns:local="clr-namespace:WpfMusicPlayer"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid x:Name="mainWindow">
+        <ComboBox x:Name="cmbSkins"  HorizontalAlignment="Left" Margin="531,52,0,0" VerticalAlignment="Top" Width="136" SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBoxItem x:Name="cmbDefault" Content="Default" HorizontalAlignment="Left" Width="134.4" FontSize="14"/>
+            <ComboBoxItem x:Name="cmbDarkMode" Content="Dark Mode" HorizontalAlignment="Left" Width="134.4" FontSize="14"/>
+            <ComboBoxItem x:Name="cmbGreenMode" Content="Green Mode" HorizontalAlignment="Left" Width="134.4" FontSize="14"/>
+        </ComboBox>
         <TextBox x:Name="txtArtist" HorizontalAlignment="Left" Height="35" Margin="26,204,0,0" TextWrapping="Wrap" Text="Artiest" VerticalAlignment="Top" Width="234" FontSize="16"/>
         <TextBox x:Name="txtNummer" HorizontalAlignment="Left" Height="33" Margin="292,204,0,0" TextWrapping="Wrap" Text="Nummer" VerticalAlignment="Top" Width="234" FontSize="16"/>
-        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="412,242,0,0" VerticalAlignment="Top" Width="115" Height="35" Click="Button_Click" FontSize="14"/>
+        <TextBox x:Name="txtBestand" HorizontalAlignment="Left" Height="35" Margin="531,242,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" FontSize="16" Text="Naam Bestand"/>
+        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="412,242,0,0" VerticalAlignment="Top" Width="114" Height="35" Click="Button_Click" FontSize="14"/>
         <Button x:Name="btnPausePlay" Content="Pause" HorizontalAlignment="Left" Margin="146,242,0,0" VerticalAlignment="Top" Width="115" Click="Button_Click" Height="35" FontSize="14"/>
-        <Button x:Name="btnStop" Content="Stop" HorizontalAlignment="Left" Margin="26,242,0,0" VerticalAlignment="Top" Width="115" Click="Button_Click" Height="35" FontSize="14"/>
+        <Button x:Name="btnStop"  Content="Stop" HorizontalAlignment="Left" Margin="26,242,0,0" VerticalAlignment="Top" Width="115" Click="Button_Click" Height="35" FontSize="14"/>
         <Button x:Name="btnNext" Content="Next" HorizontalAlignment="Left" Margin="146,282,0,0" VerticalAlignment="Top" Width="115" Click="Button_Click" Height="35" FontSize="14"/>
         <Button x:Name="btnPrevious" Content="Previous" HorizontalAlignment="Left" Margin="26,282,0,0" VerticalAlignment="Top" Width="115" Click="Button_Click" Height="35" FontSize="14"/>
-        <Button x:Name="btnMute" Content="Mute" HorizontalAlignment="Left" Margin="292,282,0,0" VerticalAlignment="Top" Width="235" Click="Button_Click" Height="35" FontSize="14"/>
-        <Slider x:Name="sldVolume" HorizontalAlignment="Left" Margin="106,334,0,0" VerticalAlignment="Top" Width="420" IsSnapToTickEnabled="True" TickFrequency="1" Maximum="100" ValueChanged="Slider_ValueChanged" Height="29"/>
+        <Button x:Name="btnMute" Content="Mute" HorizontalAlignment="Left" Margin="442,334,0,0" VerticalAlignment="Top" Width="84" Click="Button_Click" Height="29" FontSize="14"/>
+        <Slider x:Name="sldVolume" HorizontalAlignment="Left" Margin="106,334,0,0" VerticalAlignment="Top" Width="331" IsSnapToTickEnabled="True" TickFrequency="1" Maximum="100" ValueChanged="Slider_ValueChanged" Height="29"/>
         <Label x:Name="lblVolume" Content="Volume" HorizontalAlignment="Left" Margin="26,334,0,0" VerticalAlignment="Top" FontSize="14" Height="29"/>
-        <Label x:Name="lblArtiest" HorizontalAlignment="Left" Margin="531,175,0,0" VerticalAlignment="Top" FontSize="14"/>
-        <Label x:Name="lblNummer" HorizontalAlignment="Left" Margin="531,190,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label x:Name="lblArtiest" HorizontalAlignment="Left" Margin="526,146,0,0" VerticalAlignment="Top" FontSize="14" Height="35" Width="235"/>
+        <Label x:Name="lblNummer" HorizontalAlignment="Left" Margin="526,181,0,0" VerticalAlignment="Top" FontSize="14" Height="35" Width="235"/>
         <Button x:Name="btnRemove" Content="Remove" HorizontalAlignment="Left" Margin="292,242,0,0" VerticalAlignment="Top" Width="115" Height="35" FontSize="14" Click="Button_Click"/>
-        <Label Content="-" HorizontalAlignment="Left" Margin="265,204,0,0" VerticalAlignment="Top" FontSize="16" Width="22" HorizontalContentAlignment="Center"/>
+        <Label x:Name="lblSymbol" Content="-" HorizontalAlignment="Left" Margin="260,204,0,0" VerticalAlignment="Top" FontSize="16" Width="32" HorizontalContentAlignment="Center"/>
         <ListBox x:Name="ltbSongs" HorizontalAlignment="Left" Height="177" Margin="26,23,0,0" VerticalAlignment="Top" Width="500" MouseDoubleClick="ltbSongs_MouseDoubleClick" FontSize="16">
             <ListBoxItem x:Name="ltbTest" Content="Aaron Smith - Dancin"/>
             <ListBoxItem Content="TLC - No Scrubs"/>
             <ListBoxItem Content="JJ Grey &amp; Mofro - The Sun Is Shining Down"/>
         </ListBox>
-        <Label Content="Currently Playing" HorizontalAlignment="Left" Margin="526,153,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
-        <ComboBox  HorizontalAlignment="Left" Margin="531,52,0,0" VerticalAlignment="Top" Width="136">
-            <ComboBoxItem Content="Dark Mode" HorizontalAlignment="Left" Width="134.4" FontSize="14"/>
-        </ComboBox>
-        <Label Content="Select skin" HorizontalAlignment="Left" Margin="526,23,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label x:Name="lblCurrentlyPlaying" Content="Currently Playing" HorizontalAlignment="Left" Margin="526,109,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <Label x:Name="lblSkin" Content="Select skin" HorizontalAlignment="Left" Margin="526,23,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Button x:Name="btnUp" Content="Move Item Up" HorizontalAlignment="Left" Margin="292,282,0,0" VerticalAlignment="Top" Width="115" Click="Button_Click" Height="35" FontSize="14"/>
+        <Button x:Name="btnDown" Content="Move Item Down" HorizontalAlignment="Left" Margin="412,282,0,0" VerticalAlignment="Top" Width="114" Click="Button_Click" Height="35" FontSize="14"/>
+        <Button x:Name="btnImport" Content="Import" HorizontalAlignment="Left" Margin="531,282,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Height="35" Click="Button_Click"/>
+        <Button x:Name="btnExport" Content="Export" HorizontalAlignment="Left" Margin="611,282,0,0" VerticalAlignment="Top" Width="75" Height="35" FontSize="14" Click="Button_Click"/>
+        <Button x:Name="btnFolder" Content="Folder" HorizontalAlignment="Left" Margin="691,282,0,0" VerticalAlignment="Top" Width="75" Height="35" FontSize="14" Click="Button_Click"/>
     </Grid>
 </Window>
