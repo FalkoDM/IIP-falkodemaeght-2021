@@ -273,8 +273,7 @@ namespace WpfMusicPlayer
             TextBox[] textbox = { txtArtist, txtNummer, txtBestand };
             Label[] labels = { lblNummer, lblArtiest, lblVolume, lblCurrentlyPlaying, lblSymbol, lblSkin };
 
-
-            // afhankelijk van de selectie in de combobox loop ik door elke lijst en pas ik de kleuren van de verschillende elementen aan
+            // afhankelijk van de selectie in de combobox loop ik door elke array en pas ik de kleuren van de verschillende elementen aan
             if (cmbDefault.IsSelected == true)
             {
                 ltbSongs.Background = new SolidColorBrush(Color.FromRgb(255, 255, 255));
