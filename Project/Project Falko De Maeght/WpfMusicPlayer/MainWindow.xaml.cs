@@ -31,6 +31,7 @@ namespace WpfMusicPlayer
         {
             InitializeComponent();
             sldVolume.Value = player.settings.volume; // zet de value van de slider al gelijk aan het start volume (gebruiksvriendelijk)
+            
         }
 
         private void ltbSongs_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -41,8 +42,8 @@ namespace WpfMusicPlayer
             // enkel als er op een liedje gedubbelklikt wordt speel dan het nummer af en display artiest en nummer
             if (selectedSong != null)
             {
-                PlaySong();
-                PrintArtistEnNummer();
+                PlaySong(selectedSong);
+                PrintArtistEnNummer(selectedSong);
             }
         }
 
@@ -60,7 +61,6 @@ namespace WpfMusicPlayer
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
             // selectedSong houdt het geselecteerde liedje bij en newSong wordt gebruikt om een liedje toe te voegen
             ListBoxItem selectedSong = (ListBoxItem)ltbSongs.SelectedItem;
             ListBoxItem newSong = new ListBoxItem();
@@ -126,14 +126,14 @@ namespace WpfMusicPlayer
                 if (index < maxIndex) // en de index is kleiner dan de maxindex
                 {
                     ltbSongs.SelectedIndex += 1; // tel bij de huidige index eentje bij, speel het af en pas het label aan
-                    PlaySong();
-                    PrintArtistEnNummer();
+                    PlaySong(selectedSong);
+                    PrintArtistEnNummer(selectedSong);
                 }
                 else // als de maxindex overschreden wordt herbegin dan terug bij het eerste liedje
                 {
                     ltbSongs.SelectedIndex = 0;
-                    PlaySong();
-                    PrintArtistEnNummer();
+                    PlaySong(selectedSong);
+                    PrintArtistEnNummer(selectedSong);
                 }
             }
 
@@ -143,32 +143,30 @@ namespace WpfMusicPlayer
                 if (index > 0) // en de index is groter dan 0
                 {
                     ltbSongs.SelectedIndex -= 1; // trek dan een af van de index van het geselecteerde liedje, speel het liedje af en pas het label aan
-                    PlaySong();
-                    PrintArtistEnNummer();
+                    PlaySong(selectedSong);
+                    PrintArtistEnNummer(selectedSong);
                 }
                 else // als de index onder nul valt stel hem dan gelijk aan de maxindex en begin bij het laatste liedje in de lijst
                 {
                     ltbSongs.SelectedIndex = ltbSongs.Items.Count - 1;
-                    PlaySong();
-                    PrintArtistEnNummer();
+                    PlaySong(selectedSong);
+                    PrintArtistEnNummer(selectedSong);
                 }
             }
 
-            var content = ltbSongs.SelectedItem;
-
-            // als op de UP knop wordt geklikt en er een item geselecteerd is met een index die hoger is dan 0
-            if (btnUp == sender && content != null && index > 0)
+            // als op de UP knop wordt geklikt en er een item geselecteerd is met een index die groter is dan 0
+            if (btnUp == sender && selectedSong != null && index > 0)
             {
                 ltbSongs.Items.RemoveAt(index); // remove dan het item aan de geselecteerde index
-                ltbSongs.Items.Insert(index - 1, content); // en voeg het terug toe een plaats hoger in de lijst
+                ltbSongs.Items.Insert(index - 1, selectedSong); // en voeg het terug toe een plaats hoger in de lijst
                 selectedSong.IsSelected = true; // zorgt ervoor dat het item geselecteerd blijft (gebruiksvriendelijker)
             }
 
             // we doen hetzelfde als bij de UP knop met het verschil dat het item eentje lager in de lijst komt te staan
-            if (btnDown == sender && content != null && index < maxIndex)
+            if (btnDown == sender && selectedSong != null && index < maxIndex)
             {
                 ltbSongs.Items.RemoveAt(index);
-                ltbSongs.Items.Insert(index + 1, content);
+                ltbSongs.Items.Insert(index + 1, selectedSong);
                 selectedSong.IsSelected = true;
             }
 
@@ -188,17 +186,15 @@ namespace WpfMusicPlayer
             }
         }
 
-        private void PlaySong() // methode om een liedje aan te roepen en af te spelen 
+        private void PlaySong(ListBoxItem selectedSong) // methode om een liedje aan te roepen en af te spelen 
         {
-            ListBoxItem selectedSong = (ListBoxItem)ltbSongs.SelectedItem;
             var musicFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyMusic);
             player.URL = System.IO.Path.Combine(musicFolder, $"{selectedSong.Content}.mp3");
             player.controls.play();
         }
 
-        private void PrintArtistEnNummer() // methode om artiest en nummer van het huidige liedje af te beelden in een label
+        private void PrintArtistEnNummer(ListBoxItem selectedSong) // methode om artiest en nummer van het huidige liedje af te beelden in een label
         {
-            ListBoxItem selectedSong = (ListBoxItem)ltbSongs.SelectedItem;
             string[] words = selectedSong.Content.ToString().Split('-');
             lblArtiest.Content = $"Artiest: {words[0]}";
             lblNummer.Content = $"Nummer: {words[1]}";
@@ -271,33 +267,12 @@ namespace WpfMusicPlayer
             }
         }
         private void UpdateUI() // methode om de inteface aan te passen
-        {                           
-            List<Button> buttons = new List<Button>(); // lijst van alle buttons
-            buttons.Add(btnAdd);
-            buttons.Add(btnUp);
-            buttons.Add(btnFolder);
-            buttons.Add(btnExport);
-            buttons.Add(btnImport);
-            buttons.Add(btnDown);
-            buttons.Add(btnMute);
-            buttons.Add(btnNext);
-            buttons.Add(btnPrevious);
-            buttons.Add(btnPausePlay);
-            buttons.Add(btnRemove);
-            buttons.Add(btnStop);
+        {
+            // drie array's van alle buttons, labels, en textboxes https://stackoverflow.com/questions/4037716/create-array-collection-of-buttons-from-existing-buttons
+            Button[] buttons = { btnAdd, btnUp, btnFolder, btnExport, btnImport, btnDown, btnMute, btnNext, btnPrevious, btnPausePlay, btnRemove, btnStop };
+            TextBox[] textbox = { txtArtist, txtNummer, txtBestand };
+            Label[] labels = { lblNummer, lblArtiest, lblVolume, lblCurrentlyPlaying, lblSymbol, lblSkin };
 
-            List<TextBox> textbox = new List<TextBox>(); // lijst van alle textboxes
-            textbox.Add(txtArtist);
-            textbox.Add(txtNummer);
-            textbox.Add(txtBestand);
-
-            List<Label> labels = new List<Label>(); // lijst van alle labels
-            labels.Add(lblNummer);
-            labels.Add(lblArtiest);
-            labels.Add(lblVolume);
-            labels.Add(lblCurrentlyPlaying);
-            labels.Add(lblSymbol);
-            labels.Add(lblSkin);
 
             // afhankelijk van de selectie in de combobox loop ik door elke lijst en pas ik de kleuren van de verschillende elementen aan
             if (cmbDefault.IsSelected == true)

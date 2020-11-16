@@ -37,9 +37,10 @@ namespace ConsoleMusicPlayer
                 PrintArtistEnNummer(newSong);
                 PrintMediaPlayer(player);
 
-                // convert consolekeyinfo naar string keuzeMediaPlayer en ga verder zonder Enter te duwen
+                // convert consolekeyinfo naar string keuzeMediaPlayer en ga verder zonder Enter te duwen 
+                // https://stackoverflow.com/questions/6989647/console-readkey-and-switch-statement-using-letters/6989864
                 var key = Console.ReadKey();
-                keuzeMediaPlayer = key.KeyChar.ToString();
+                keuzeMediaPlayer = key.KeyChar.ToString();  
 
                 // switch om een keuze te maken in het Media Player menu
                 switch (keuzeMediaPlayer)
