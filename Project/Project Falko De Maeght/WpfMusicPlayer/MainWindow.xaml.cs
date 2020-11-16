@@ -235,7 +235,7 @@ namespace WpfMusicPlayer
             {
                 foreach (ListBoxItem item in ltbSongs.Items) // voor elke listboxitem in de listbox
                 {
-                    schrijfTekstbestand.WriteLine(item.Content); // schrijf de content regel per regel weg in het tekstbestand
+                    schrijfTekstbestand.WriteLine(item.Content); // schrijf de content regel per regel weg naar het tekstbestand
                 }
             }
         }

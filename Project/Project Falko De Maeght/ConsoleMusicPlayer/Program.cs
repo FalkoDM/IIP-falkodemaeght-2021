@@ -187,15 +187,18 @@ namespace ConsoleMusicPlayer
 
         // methode voor het afbeelden van de artiest en het nummer
         static private void PrintArtistEnNummer(string newSong)
-        {
+        {            
             // voer onderstaande code enkel uit als er een liedje geselecteerd is 
             if (newSong != "")
             {
                 // split de string aan het "-" teken, beeld het eerste deel van de string af op een lijn en vervolgens het tweede deel op een nieuwe lijn
-                string[] words = newSong.Split('-');
-                Console.WriteLine($"De artiest is: {words[0].ToUpper()} {Environment.NewLine}" +
+                string[] words = newSong.Split('-');              
+                Console.ForegroundColor = ConsoleColor.DarkBlue; // voeg color toe 
+                Console.BackgroundColor = ConsoleColor.Yellow;
+                Console.WriteLine($"De artiest is: {words[0].ToUpper()} {Environment.NewLine}" + 
                 $"Het nummer is:{words[1].ToUpper()}");
-                Console.WriteLine();   
+                Console.ResetColor(); // reset color opnieuw na de writeline
+                Console.WriteLine();
             }  
         }
 
@@ -250,9 +253,9 @@ namespace ConsoleMusicPlayer
         {
             Console.WriteLine();
             Console.WriteLine();
-            foreach (string nummer in songs)
+            for (int i = 0; i < songs.Count; i++)
             {
-                Console.WriteLine($"{songs.IndexOf(nummer)}: {nummer}");
+                Console.WriteLine($"{i}: {songs[i]}");
             }
             Console.WriteLine();
         }
@@ -399,7 +402,6 @@ namespace ConsoleMusicPlayer
             var docsFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             string doelBestand = System.IO.Path.Combine(docsFolder, $"{bestand}.txt");
             File.WriteAllLines(doelBestand, songs);
-
         }
 
         // methode om de playlist te importeren van een tekstbestand
