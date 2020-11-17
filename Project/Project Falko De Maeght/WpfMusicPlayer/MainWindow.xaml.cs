@@ -30,8 +30,7 @@ namespace WpfMusicPlayer
         public MainWindow()
         {
             InitializeComponent();
-            sldVolume.Value = player.settings.volume; // zet de value van de slider al gelijk aan het start volume (gebruiksvriendelijk)
-            
+            sldVolume.Value = player.settings.volume; // zet de value van de slider al gelijk aan het start volume (gebruiksvriendelijk)         
         }
 
         private void ltbSongs_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -125,16 +124,15 @@ namespace WpfMusicPlayer
             {
                 if (index < maxIndex) // en de index is kleiner dan de maxindex
                 {
-                    ltbSongs.SelectedIndex += 1; // tel bij de huidige index eentje bij, speel het af en pas het label aan
-                    PlaySong(selectedSong);
-                    PrintArtistEnNummer(selectedSong);
+                    ltbSongs.SelectedIndex += 1; // tel bij de index van het geselecteerde liedje eentje bij    
                 }
                 else // als de maxindex overschreden wordt herbegin dan terug bij het eerste liedje
                 {
                     ltbSongs.SelectedIndex = 0;
-                    PlaySong(selectedSong);
-                    PrintArtistEnNummer(selectedSong);
                 }
+                selectedSong = (ListBoxItem)ltbSongs.SelectedItem; // update selectedSong, speel het af en geef weer in label
+                PlaySong(selectedSong);
+                PrintArtistEnNummer(selectedSong);
             }
 
             // als op de Previous knop wordt geklikt en er is een item geselecteerd
@@ -142,16 +140,15 @@ namespace WpfMusicPlayer
             {
                 if (index > 0) // en de index is groter dan 0
                 {
-                    ltbSongs.SelectedIndex -= 1; // trek dan een af van de index van het geselecteerde liedje, speel het liedje af en pas het label aan
-                    PlaySong(selectedSong);
-                    PrintArtistEnNummer(selectedSong);
+                    ltbSongs.SelectedIndex -= 1; // trek dan een af van de index van het geselecteerde liedje
                 }
-                else // als de index onder nul valt stel hem dan gelijk aan de maxindex en begin bij het laatste liedje in de lijst
+                else // als de index onder nul valt stel hem dan gelijk aan de maxindex en begin bij het laatste liedje
                 {
                     ltbSongs.SelectedIndex = ltbSongs.Items.Count - 1;
-                    PlaySong(selectedSong);
-                    PrintArtistEnNummer(selectedSong);
                 }
+                selectedSong = (ListBoxItem)ltbSongs.SelectedItem; // update selectedSong speel het af en geef weer in label
+                PlaySong(selectedSong);
+                PrintArtistEnNummer(selectedSong);
             }
 
             // als op de UP knop wordt geklikt en er een item geselecteerd is met een index die groter is dan 0
@@ -195,19 +192,16 @@ namespace WpfMusicPlayer
 
         private void PrintArtistEnNummer(ListBoxItem selectedSong) // methode om artiest en nummer van het huidige liedje af te beelden in een label
         {
-            string[] words = selectedSong.Content.ToString().Split('-');
-
-            if (words.Length > 1) // array words moet minstens twee woorden bevatten (anders index out of bounds error)
+            if (ltbSongs.SelectedItem != null)
             {
+                string[] words = selectedSong.Content.ToString().Split('-');      
                 lblArtiest.Content = $"Artiest: {words[0]}";
-                lblNummer.Content = $"Nummer: {words[1]}";   
-            } 
+                lblNummer.Content = $"Nummer: {words[1]}";    
+            }      
         }
 
         private void ImportTekstBestand() // metode om tekstbestand te importeren naar listbox
         {
-            txtBestand.Text = "Naam Bestand"; // reset textbox naar de originele content
-
             // variabelen die het pad zoeken naar Mijn Documenten op de pc
             var docsFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             string doelBestand = System.IO.Path.Combine(docsFolder, $"{txtBestand.Text}.txt");
@@ -226,12 +220,11 @@ namespace WpfMusicPlayer
                     }
                 }
             }
+            txtBestand.Text = "Naam Bestand"; // reset textbox naar de originele content
         }
 
         private void ExportNaarTekstBestand() // methode om listbox te exporteren naar tekstbestand
         {
-            txtBestand.Text = "Naam Bestand"; // reset textbox naar originele content
-
             // variabelen die het pad zoeken naar mijn documenten op de pc
             var docsFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             string doelBestand = System.IO.Path.Combine(docsFolder, $"{txtBestand.Text}.txt");
@@ -242,6 +235,7 @@ namespace WpfMusicPlayer
                     schrijfTekstbestand.WriteLine(item.Content); // schrijf de content regel per regel weg naar het tekstbestand
                 }
             }
+            txtBestand.Text = "Naam Bestand"; // reset textbox naar originele content
         }
 
         private void OpenFolderEnAddSong() // methode om liejde toe te voegen via folderview

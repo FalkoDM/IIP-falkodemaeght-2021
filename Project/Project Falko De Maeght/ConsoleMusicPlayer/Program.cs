@@ -168,7 +168,7 @@ namespace ConsoleMusicPlayer
         {
             //geef het huidige volume weer in percentage
             int volume = player.settings.volume;
-            Console.WriteLine($"Het huidige volume is {volume}%");
+            Console.WriteLine($"Volume: {volume}%");
 
             // berekening aantal balkjes
             int aantalBalkjes = volume / 5; 
@@ -186,11 +186,11 @@ namespace ConsoleMusicPlayer
         // methode voor het afbeelden van de artiest en het nummer
         static private void PrintArtistEnNummer(string newSong)
         {                            
-            string[] words = newSong.Split('-'); // split huidig liedje aan het "-" teken
 
-            // voer onderstaande code enkel uit als er een liedje geselecteerd is en als de split minstens twee woorden / elementen oplevert (anders is index out of bound)
-            if (newSong != "" && words.Length > 1)
-            {
+            // voer onderstaande code enkel uit als er een liedje geselecteerd is
+            if (newSong != "")
+            {           
+                string[] words = newSong.Split('-'); // split huidig liedje aan het "-" teken
                 Console.ForegroundColor = ConsoleColor.DarkBlue; // voeg color toe 
                 Console.BackgroundColor = ConsoleColor.Yellow;
                 Console.WriteLine($"De artiest is: {words[0].ToUpper()} {Environment.NewLine}" + 
