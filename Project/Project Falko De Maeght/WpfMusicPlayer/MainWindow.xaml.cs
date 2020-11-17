@@ -279,64 +279,65 @@ namespace WpfMusicPlayer
                 ltbSongs.Background = new SolidColorBrush(Color.FromRgb(255, 255, 255));
                 ltbSongs.Foreground = new SolidColorBrush(Color.FromRgb(0, 0, 0));
                 mainWindow.Background = new SolidColorBrush(Color.FromRgb(255, 255, 255));
-                foreach (Button item in buttons)
+                for (int i = 0; i < buttons.Length; i++)
                 {
-                    item.Background = new SolidColorBrush(Color.FromRgb(220, 220, 220));
-                    item.Foreground = new SolidColorBrush(Color.FromRgb(0, 0, 0));
+                    buttons[i].Background = new SolidColorBrush(Color.FromRgb(220, 220, 220));
+                    buttons[i].Foreground = new SolidColorBrush(Color.FromRgb(0, 0, 0));
                 }
-                foreach (TextBox item in textbox)
+                for (int i = 0; i < textbox.Length; i++)
                 {
-                    item.Background = new SolidColorBrush(Color.FromRgb(255, 255, 255));
-                    item.Foreground = new SolidColorBrush(Color.FromRgb(0, 0, 0));
+                    textbox[i].Background = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+                    textbox[i].Foreground = new SolidColorBrush(Color.FromRgb(0, 0, 0));
                 }
-                foreach (Label item in labels)
+                for (int i = 0; i < labels.Length; i++)
                 {
-                    item.Background = new SolidColorBrush(Color.FromRgb(255, 255, 255));
-                    item.Foreground = new SolidColorBrush(Color.FromRgb(0, 0, 0));
+                    labels[i].Background = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+                    labels[i].Foreground = new SolidColorBrush(Color.FromRgb(0, 0, 0));
                 }
             }
+
             if (cmbDarkMode.IsSelected)
             {
                 ltbSongs.Background = new SolidColorBrush(Color.FromRgb(100, 100, 100));
                 ltbSongs.Foreground = new SolidColorBrush(Color.FromRgb(255, 255, 255));
                 mainWindow.Background = new SolidColorBrush(Color.FromRgb(0, 0, 0));
 
-                foreach (Button item in buttons)
+                for (int i = 0; i < buttons.Length; i++)
                 {
-                    item.Background = new SolidColorBrush(Color.FromRgb(0, 0, 45));
-                    item.Foreground = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+                    buttons[i].Background = new SolidColorBrush(Color.FromRgb(0, 0, 45));
+                    buttons[i].Foreground = new SolidColorBrush(Color.FromRgb(255, 255, 255));
                 }
-                foreach (TextBox item in textbox)
+                for (int i = 0; i < textbox.Length; i++)
                 {
-                    item.Background = new SolidColorBrush(Color.FromRgb(0, 0, 100));
-                    item.Foreground = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+                    textbox[i].Background = new SolidColorBrush(Color.FromRgb(0, 0, 100));
+                    textbox[i].Foreground = new SolidColorBrush(Color.FromRgb(255, 255, 255));
                 }
-                foreach (Label item in labels)
+                for (int i = 0; i < labels.Length; i++)
                 {
-                    item.Background = new SolidColorBrush(Color.FromRgb(0, 0, 0));
-                    item.Foreground = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+                    labels[i].Background = new SolidColorBrush(Color.FromRgb(0, 0, 0));
+                    labels[i].Foreground = new SolidColorBrush(Color.FromRgb(255, 255, 255));
                 }
             }
+
             if (cmbGreenMode.IsSelected)
             {
                 ltbSongs.Background = new SolidColorBrush(Color.FromRgb(215, 245, 180));
                 ltbSongs.Foreground = new SolidColorBrush(Color.FromRgb(0, 0, 0));
                 mainWindow.Background = new SolidColorBrush(Color.FromRgb(0, 65, 0));
-
-                foreach (Button item in buttons)
+                for (int i = 0; i < buttons.Length; i++)
                 {
-                    item.Background = new SolidColorBrush(Color.FromRgb(35, 115, 0));
-                    item.Foreground = new SolidColorBrush(Color.FromRgb(0, 0, 0));
+                    buttons[i].Background = new SolidColorBrush(Color.FromRgb(35, 115, 0));
+                    buttons[i].Foreground = new SolidColorBrush(Color.FromRgb(0, 0, 0));
                 }
-                foreach (TextBox item in textbox)
+                for (int i = 0; i < textbox.Length; i++)
                 {
-                    item.Background = new SolidColorBrush(Color.FromRgb(170, 255, 35));
-                    item.Foreground = new SolidColorBrush(Color.FromRgb(0, 0, 0));
+                    textbox[i].Background = new SolidColorBrush(Color.FromRgb(170, 255, 35));
+                    textbox[i].Foreground = new SolidColorBrush(Color.FromRgb(0, 0, 0));
                 }
-                foreach (Label item in labels)
+                for (int i = 0; i < labels.Length; i++)
                 {
-                    item.Background = new SolidColorBrush(Color.FromRgb(0, 65, 0));
-                    item.Foreground = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+                    labels[i].Background = new SolidColorBrush(Color.FromRgb(0, 65, 0));
+                    labels[i].Foreground = new SolidColorBrush(Color.FromRgb(255, 255, 255));
                 }
             }
         }

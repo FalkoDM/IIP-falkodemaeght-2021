@@ -370,7 +370,7 @@ namespace ConsoleMusicPlayer
         // methode voor het verwijderen van een liedje
         static private int RemoveSong(List<string>songs, int maxIndex, int index)
         {
-            // als de lijst niet leeg is en de ingegeven waarde kleiner is dan de maxIndex verwijder dan het liedje
+            // als de lijst een item bevat en de ingegeven waarde kleiner of gelijk is aan de maxIndex verwijder dan het liedje
             if (songs.Count != 0 && index <= maxIndex)
             {
                 maxIndex--;
