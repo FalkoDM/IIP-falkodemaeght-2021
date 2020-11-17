@@ -39,8 +39,7 @@ namespace ConsoleMusicPlayer
 
                 // convert consolekeyinfo naar string keuzeMediaPlayer en ga verder zonder Enter te duwen 
                 // https://stackoverflow.com/questions/6989647/console-readkey-and-switch-statement-using-letters/6989864
-                var key = Console.ReadKey();
-                keuzeMediaPlayer = key.KeyChar.ToString();  
+                keuzeMediaPlayer = Console.ReadKey().KeyChar.ToString();  
 
                 // switch om een keuze te maken in het Media Player menu
                 switch (keuzeMediaPlayer)
@@ -53,8 +52,7 @@ namespace ConsoleMusicPlayer
                         PrintPlaylistMenu();
 
                         // omzetten consolekeyinfo naar string keuzePlaylist en ga verder zonder Enter te duwen
-                        var keyMenu = Console.ReadKey();
-                        string keuzePlaylist = keyMenu.KeyChar.ToString();
+                        string keuzePlaylist = Console.ReadKey().KeyChar.ToString();
 
                         // een tweede switch om een keuze te maken in het Playlist menu
                         switch (keuzePlaylist)
@@ -169,15 +167,15 @@ namespace ConsoleMusicPlayer
         static private void PrintVolume(WindowsMediaPlayer player)
         {
             //geef het huidige volume weer in percentage
-            var huidigVolume = player.settings.volume;
-            Console.WriteLine($"Het huidige volume is {huidigVolume}%");
+            int volume = player.settings.volume;
+            Console.WriteLine($"Het huidige volume is {volume}%");
 
             // berekening aantal balkjes
-            var aantalBalken = huidigVolume / 5; 
-            Console.Write($"{aantalBalken} balkjes: ");
+            int aantalBalkjes = volume / 5; 
+            Console.Write($"{aantalBalkjes} balkjes: ");
 
             // for loop die aantal balkjes weergeeft
-            for (int i = 0; i < aantalBalken; i++)
+            for (int i = 0; i < aantalBalkjes; i++)
             {
                 Console.Write("# ");
             }
@@ -187,12 +185,12 @@ namespace ConsoleMusicPlayer
 
         // methode voor het afbeelden van de artiest en het nummer
         static private void PrintArtistEnNummer(string newSong)
-        {            
-            // voer onderstaande code enkel uit als er een liedje geselecteerd is 
-            if (newSong != "")
+        {                            
+            string[] words = newSong.Split('-'); // split huidig liedje aan het "-" teken
+
+            // voer onderstaande code enkel uit als er een liedje geselecteerd is en als de split minstens twee woorden / elementen oplevert (anders is index out of bound)
+            if (newSong != "" && words.Length > 1)
             {
-                // split de string aan het "-" teken, beeld het eerste deel van de string af op een lijn en vervolgens het tweede deel op een nieuwe lijn
-                string[] words = newSong.Split('-');              
                 Console.ForegroundColor = ConsoleColor.DarkBlue; // voeg color toe 
                 Console.BackgroundColor = ConsoleColor.Yellow;
                 Console.WriteLine($"De artiest is: {words[0].ToUpper()} {Environment.NewLine}" + 

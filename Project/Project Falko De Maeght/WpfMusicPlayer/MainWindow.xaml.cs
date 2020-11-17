@@ -196,8 +196,12 @@ namespace WpfMusicPlayer
         private void PrintArtistEnNummer(ListBoxItem selectedSong) // methode om artiest en nummer van het huidige liedje af te beelden in een label
         {
             string[] words = selectedSong.Content.ToString().Split('-');
-            lblArtiest.Content = $"Artiest: {words[0]}";
-            lblNummer.Content = $"Nummer: {words[1]}";
+
+            if (words.Length > 1) // array words moet minstens twee woorden bevatten (anders index out of bounds error)
+            {
+                lblArtiest.Content = $"Artiest: {words[0]}";
+                lblNummer.Content = $"Nummer: {words[1]}";   
+            } 
         }
 
         private void ImportTekstBestand() // metode om tekstbestand te importeren naar listbox
