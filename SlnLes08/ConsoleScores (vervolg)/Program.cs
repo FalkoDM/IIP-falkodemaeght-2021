@@ -23,13 +23,15 @@ namespace ConsoleScores__vervolg_
             // schrijf het gemiddelde uit mbv de methode BepaalGemiddelde()
             Console.WriteLine($"De gemiddelde score van de test was: {BepaalGemiddelde(scores, index)}");
 
-            // variabele indexGrootste om de index van de hoogste score te bepalen
-            int indexGrootste = scores.ToList().IndexOf(Zoekgrootste(scores));
-            Console.WriteLine($"De beste score op de test was: {Zoekgrootste(scores)} (positie {indexGrootste + 1})"); // +1 omdat index van 0 begint
+            // variabele indexGrootste en maxvalue om de index van de hoogste score te bepalen
+            int maxValue = Zoekgrootste(scores);
+            int indexGrootste = scores.ToList().IndexOf(maxValue);
+            Console.WriteLine($"De beste score op de test was: {maxValue} (positie {indexGrootste + 1})"); // +1 omdat index van 0 begint
 
             // variabele indexKleinste om de index van de kleinste score te bepalen
-            int indexKleinste = scores.ToList().IndexOf(ZoekKleinste(scores));
-            Console.WriteLine($"De slechtste score op de test was: {ZoekKleinste(scores)} (positie {indexKleinste + 1})"); // +1 omdat index van 0 begint
+            int minValue = ZoekKleinste(scores);
+            int indexKleinste = scores.ToList().IndexOf(minValue);
+            Console.WriteLine($"De slechtste score op de test was: {minValue} (positie {indexKleinste + 1})"); // +1 omdat index van 0 begint
             Console.ReadKey();
         }
         static private string PrintScores(int[] scores, int index)
@@ -37,7 +39,7 @@ namespace ConsoleScores__vervolg_
             // random klasse
             Random rnd = new Random();
 
-            // variabele voor opbouw van array als string
+            // variabele waar de waarde als string in worden opgeslaan
             string weergaveArray = "";
             for (int i = 0; i < index; i++)
             {
@@ -48,18 +50,17 @@ namespace ConsoleScores__vervolg_
                 scores[i] = randomScore;
 
                 // sla ze op in de string
-                weergaveArray += scores[i];
+                weergaveArray += randomScore;
                 
                 // geef een komma mee of het woordje "en"
                 if (i < index - 2)
                 {
                     weergaveArray += ", ";
                 }
-                if (i == index - 2)
+                else if (i == index - 2)
                 {
                     weergaveArray += " en ";
-                }
-       
+                }    
             }
             return weergaveArray;
         }

@@ -28,13 +28,13 @@ namespace ConsoleScores
             {
                 som += scoreTest[i];
                 weergaveArray += scoreTest[i];
-                if (i == scoreTest.Length - 2)
-                {
-                    weergaveArray += " en ";
-                }
-                if (i < scoreTest.Length -2)
+                if (i < scoreTest.Length - 2)
                 {
                     weergaveArray += ", ";
+                }
+                else if (i == scoreTest.Length -2)
+                {
+                    weergaveArray += " en ";
                 }
             }
             // bereken gemiddelde

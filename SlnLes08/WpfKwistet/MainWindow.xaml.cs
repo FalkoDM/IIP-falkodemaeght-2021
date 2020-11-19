@@ -35,7 +35,7 @@ namespace WpfKwistet
             // variabele kwisgroep die het geselecteerde item opslaat
             ListBoxItem kwisgroep = (ListBoxItem)ltbStorage.SelectedItem;
 
-            // variabele item die een nieuw ListBoxItem kan genereren
+            // variabele item die een nieuw ListBoxItem genereert
             ListBoxItem item = new ListBoxItem();
             item.Content = txtName.Text;
 
@@ -46,29 +46,24 @@ namespace WpfKwistet
                 txtName.Text = string.Empty;           
             }
             // als er een item geselecteerd is, verwijder dan dat item
-            if (btnDelete == sender && kwisgroep != null)
+            else if (btnDelete == sender && kwisgroep.IsSelected)
             {
                  ltbStorage.Items.Remove(kwisgroep);                
             }
             // als er een item geselecteerd is en het textvak is niet leeg, verander dan de content van het item
-            if (btnMod == sender && kwisgroep != null && txtName.Text != string.Empty)
+            else if (btnMod == sender && kwisgroep.IsSelected && txtName.Text != string.Empty)
             {
-                ltbStorage.Items[ltbStorage.SelectedIndex] = item;
+                ltbStorage.Items[ltbStorage.SelectedIndex] = txtName.Text;
                 txtName.Text = string.Empty;               
             }
             // als de listbox items bevat maak het mogelijk om de lijst in een keer leeg te maken
-            if (btnClear == sender)
+            else if (btnClear == sender)
             {
                 ltbStorage.Items.Clear();
             }
         }
         // methode aangemaakt voor de changed events aan te spreken
         private void ButtonControl(object sender, RoutedEventArgs e)
-        {
-            ButtonCheck();
-        }
-        // methode aangemaakt voor de buttonweergave te regelen
-        private void ButtonCheck()
         {
             // als teksbox een string bevat activeer de add knop, zoniet disable opnieuw
             if (txtName.Text != string.Empty)

@@ -37,40 +37,42 @@ namespace WpfTodo
             ListBoxItem item = new ListBoxItem();
             item.Content = txtTaak.Text;
 
-            // als de textbox een string bevat en combobox hoge prioriteit is geselecteerd geef dan rode kleur mee en voeg item toe
-            if (btnAdd == sender && txtTaak.Text != string.Empty && cmbHoog.IsSelected)
+            if (btnAdd == sender)
+            {
+                AddContent(item);
+            }
+            // als de listbox een item bevat verwijder dan het geselecteerde item
+            else if (btnDelete == sender && task.IsSelected)
+            {
+                ltbToDo.Items.Remove(task);
+            }
+        }
+        private void AddContent(ListBoxItem item)
+        {
+            if (cmbHoog.IsSelected)
             {
                 item.Foreground = new SolidColorBrush(Color.FromRgb(150, 0, 0));
                 ltbToDo.Items.Add(item);
                 txtTaak.Text = string.Empty;
             }
             // als de textbox een string bevat en combobox medium prio is geselecteerd geef dan oranje kleur mee en voeg item toe
-            if (btnAdd == sender && txtTaak.Text != string.Empty && cmbMedium.IsSelected)
+            else if (cmbMedium.IsSelected)
             {
                 item.Foreground = new SolidColorBrush(Color.FromRgb(255, 130, 0));
                 ltbToDo.Items.Add(item);
                 txtTaak.Text = string.Empty;
             }
             // als de textbox een string bevat en combobox lage prio is geselecteerd geef dan groene kleuer mee en voeg item toe
-            if (btnAdd == sender && txtTaak.Text != string.Empty && cmbLaag.IsSelected)
+            else if (cmbLaag.IsSelected)
             {
                 item.Foreground = new SolidColorBrush(Color.FromRgb(0, 195, 0));
                 ltbToDo.Items.Add(item);
                 txtTaak.Text = string.Empty;
             }
-            // als de listbox een item bevat verwijder dan het geselecteerde item
-            if (btnDelete == sender && task != null)
-            {
-                ltbToDo.Items.Remove(task);
-            }
         }
-        // methode buttoncontrol om de verschillende events aan te spreken
+
+        // buttoncontrol om de verschillende events aan te spreken (selection changed, text changed events)
         private void ButtonControl(object sender, RoutedEventArgs e)
-        {
-            ButtonCheck();
-        }
-        // een methode buttoncheck aangemaakt om de knoppen te enabeen en te disabelen afhankelijk van de voorwaarden
-        private void ButtonCheck()
         {
             // is de voorwaarde voldaan activeer dan de toevoegen knop en anders disable hem opnieuw
             if (cmbHoog.IsSelected && txtTaak.Text != string.Empty || cmbMedium.IsSelected && txtTaak.Text != string.Empty || cmbLaag.IsSelected && txtTaak.Text != string.Empty)

@@ -16,8 +16,9 @@ namespace ConsoleFibonacci
             // declareer de array
             int[] array = new int[range];
 
-            // schrijf de lijst uit (string.join dient om een spatie mee te geven)
-            Console.Write($"De eerste {range} Fibonacci getallen zijn: {string.Join(" ", BerekenFibonacci(array, range))}");
+            // schrijf de lijst uit en sla op in string fibonacci (string.join dient om een spatie mee te geven)
+            string fibonacci = string.Join(" ", BerekenFibonacci(array, range));
+            Console.Write($"De eerste {range} Fibonacci getallen zijn: {fibonacci}");
             Console.ReadKey();
         }
         // methode voor het berekenen van de fibonacci rij
